@@ -45,4 +45,3 @@ puts "#{i} shares created in #{delta/60} minutes"
    # performanceid: row[:performanceid],
    # fundid: row[:fundid],
    # securityname: row[:securityname],
-   # company: row[:company]
