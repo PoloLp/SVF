@@ -9,6 +9,7 @@ gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
 gem 'activerecord-import'
+gem 'nokogiri'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
