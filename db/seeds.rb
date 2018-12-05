@@ -8,44 +8,48 @@ require 'nokogiri'
 
 
 require 'pry-byebug'
-# puts 'Create shares'
-# p '*' *30
+puts 'Create shares'
+p '*' *30
 # Timer ---------------------------------------------
 t1 = Time.now
 
-# i= 0
+i= 0
 
-# 1valid_shares = []
+valid_shares = []
 
-# filepath = 'db/MASTER fr.csv'
-# csv_options = { col_sep: ';', quote_char: '"', force_quotes: true,
-#                 headers: :first_row, header_converters: :symbol }
+filepath = 'db/MASTER.csv'
+csv_options = { col_sep: ';', quote_char: '"', force_quotes: true,
+                headers: :first_row, header_converters: :symbol }
 
-# CSV.foreach(filepath, csv_options) do |row|
-#   shares = Share.new(isin: row[:isin]
-#                       )
+CSV.foreach(filepath, csv_options) do |row|
+  shares = Share.new(isin: row[:isin],
+                     secid: row[:secid],
+                     performanceid: row[:performanceid],
+                     fundid: row[:fundid],
+                     securityname: row[:securityname],
+                     company: row[:company]
+                      )
 
-#   valid_shares << shares
+  valid_shares << shares
 
-#   # shares.save
-#   i += 1
-#   # puts "#{i} | #{Share.last.isin}"
+  i += 1
+  # puts "#{i} | #{Share.last.isin}"
 
-#   if (i % 10000) == 0 then
-#   puts "#{i/10000} milliers de shares crées"
-#   end
-# end
+  if (i % 10000) == 0 then
+    puts "#{i/10000} milliers de shares crées"
+  end
+end
 
-# Share.import valid_shares
+Share.import valid_shares
 
 # Timer ---------------------------------------------
 t2 = Time.now
 delta = t2 - t1
 
-# p '*' *30
-# puts "#{Share.count} shares created in #{delta/60} minutes"
+p '*' *30
+puts "#{Share.count} shares created in #{delta/60} minutes"
 
-# à faire avec le chemin http !!!
+# à faire avec le chemin http !!! -----------------------------
 
 p '*' *30
 puts 'Create Categories'
@@ -61,10 +65,3 @@ document.root.children.each do |category|
   p "#{type_code_id} | nom fr : #{def_fr} | nom en : #{def_en}"
 end
 
-
-
-      # t.bigint :typecodeid
-      # t.string :typecodegroup
-      # t.string :typecode
-      # t.string :definitionfrench
-      # t.string :definition
