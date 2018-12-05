@@ -10,6 +10,7 @@ require 'nokogiri'
 require 'pry-byebug'
 puts 'Create shares'
 p '*' *30
+
 # Timer ---------------------------------------------
 t1 = Time.now
 
@@ -17,7 +18,7 @@ i= 0
 
 valid_shares = []
 
-filepath = 'db/MASTER.csv'
+filepath = 'db/MASTER fr.csv'
 csv_options = { col_sep: ';', quote_char: '"', force_quotes: true,
                 headers: :first_row, header_converters: :symbol }
 
@@ -48,20 +49,42 @@ delta = t2 - t1
 
 p '*' *30
 puts "#{Share.count} shares created in #{delta/60} minutes"
-
-# à faire avec le chemin http !!! -----------------------------
-
 p '*' *30
 puts 'Create Categories'
 p '*' *30
 
+# Timer ---------------------------------------------
+t1 = Time.now
+
+valid_categories = []
+
+# *****************************************************************
+# à faire avec le chemin http !!! -----------------------------
+# *****************************************************************
 file = File.open('db/categories.xml')
 document = Nokogiri::XML(file)
-# byebug
+
 document.root.children.each do |category|
-  type_code_id = category.xpath('TypeCode').text
+
   def_fr = category.xpath('Definition_French').text
-  def_en = category.xpath('Definition').text
-  p "#{type_code_id} | nom fr : #{def_fr} | nom en : #{def_en}"
+
+  if !def_fr.empty?
+    category = Category.new(
+                            typecodeid: category.xpath('TypeCodeId').text,
+                            typecodegroup: category.xpath('TypeCodeGroup').text,
+                            typecode: category.xpath('TypeCode').text,
+                            definitionfrench: def_fr,
+                            definition: category.xpath('Definition').text
+    )
+  valid_categories << category
+  end
+
 end
 
+Category.import valid_categories
+
+# Timer ---------------------------------------------
+t2 = Time.now
+delta = t2 - t1
+
+puts "#{Category.count} categories created in #{delta} minutes"
