@@ -31,7 +31,20 @@ ActiveRecord::Schema.define(version: 2018_12_04_213714) do
     t.string "performanceid"
     t.string "fundid"
     t.string "securityname"
-    t.string "company"
+    t.string "companyname"
+    t.string "fundname"
+    t.string "legalstructure"
+    t.string "shareclasslegalname"
+    t.boolean "ucits"
+    t.string "morningstarcategoryid"
+    t.boolean "isbasecurrency"
+    t.boolean "isprimaryshareclass"
+    t.string "currencyspecificisin"
+    t.string "currencyid"
+    t.string "masterportfolioid"
+    t.string "legalstructureid"
+    t.boolean "fr_pea"
+    t.datetime "portfoliodate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

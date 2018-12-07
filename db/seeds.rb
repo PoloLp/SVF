@@ -5,9 +5,8 @@ require 'csv'
 require 'activerecord-import'
 require 'open-uri'
 require 'nokogiri'
-
-
 require 'pry-byebug'
+
 puts 'Create shares'
 p '*' *30
 
@@ -28,8 +27,21 @@ CSV.foreach(filepath, csv_options) do |row|
                      performanceid: row[:performanceid],
                      fundid: row[:fundid],
                      securityname: row[:securityname],
-                     company: row[:company]
-                      )
+                     companyname: row[:companyname],
+                     fundname: row[:fundname],
+                     legalstructure: row[:legalstructure],
+                     shareclasslegalname: row[:shareclasslegalname],
+                     ucits: row[:ucits],
+                     morningstarcategoryid: row[:morningstarcategoryid],
+                     isbasecurrency: row[:isbasecurrency],
+                     isprimaryshareclass: row[:isprimaryshareclass],
+                     currencyspecificisin: row[:currencyspecificisin],
+                     currencyid: row[:currencyid],
+                     masterportfolioid: row[:masterportfolioid],
+                     legalstructureid: row[:legalstructureid],
+                     fr_pea: row[:fr_pea],
+                     portfoliodate: row[:portfoliodate]
+                    )
 
   valid_shares << shares
 
