@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <%= form_tag shares_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a fund by isin"
+      %>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div id="movies">
+        <% @shares.each do |share| %>
+          <h4><%= share.isin %></h4>
+          <p><%= share.fundname %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
