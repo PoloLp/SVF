@@ -1,4 +1,5 @@
 <div class="container">
+  <h2>Suivi des fonds</h2>
   <div class="row">
     <%= form_tag shares_path, method: :get do %>
       <%= text_field_tag :query,
@@ -13,8 +14,11 @@
     <div class="col-sm-8 col-sm-offset-2">
       <div id="movies">
         <% @shares.each do |share| %>
-          <h4><%= share.isin %></h4>
-          <p><%= share.fundname %></p>
+          <h4><%="isin : #{share.isin}" %></h4>
+          <h5><%= "Currency specific isin : #{share.currencyspecificisin}" %></h5>
+          <p><%= "Nom du fonds : #{share.fundname}" %></p>
+          <p><%= "Nom de la part : #{share.securityname}" %></p>
+
         <% end %>
       </div>
     </div>

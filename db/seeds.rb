@@ -17,7 +17,7 @@ i= 0
 
 valid_shares = []
 
-filepath = 'db/MASTER fr.csv'
+filepath = 'db/MASTER.csv'
 csv_options = { col_sep: ';', quote_char: '"', force_quotes: true,
                 headers: :first_row, header_converters: :symbol }
 
@@ -49,11 +49,15 @@ CSV.foreach(filepath, csv_options) do |row|
   # puts "#{i} | #{Share.last.isin}"
 
   if (i % 10000) == 0 then
+    Share.import valid_shares
     puts "#{i/10000} milliers de shares crées"
+    valid_shares = []
   end
 end
 
-Share.import valid_shares
+if valid_shares.count > 0 then
+  Share.import valid_shares
+end
 
 # Timer ---------------------------------------------
 t2 = Time.now

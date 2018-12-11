@@ -1,5 +1,4 @@
 class SharesController < ApplicationController
-
   def index
     if params[:query].present?
       sql_query = "isin ILIKE :query OR currencyspecificisin ILIKE :query"
