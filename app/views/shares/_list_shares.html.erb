@@ -1,29 +1,40 @@
-<% @shares.each do |share| %>
+<%= form_tag edit_individual_shares_path do %>
+  <% @shares.each do |share| %>
+
+    <div class="share-list-item">
+      <!-- <#%= link_to "MAJ", new_share_review_path(share), class: "btn  btn-success"%> -->
+      <%= check_box_tag "share_ids[]", share.id %>
+
+      <div class="share-list-item-name">
+        <h3>
+          <%= render 'currency_display', share: share %>
+          <%= " - #{share.isin}" %>
+        </h3>
+        <p><%= "Currency S isin : #{share.currencyspecificisin}" %></p>
+      </div>
+
+      <div class="share-list-item-body">
+        <p><strong> <%= share.securityname %> </strong></p>
+        <p><%= "Nom du fonds : #{share.fundname}" %></p>
+      </div>
+
+      <%= render 'currency_check', share: share %>
+    </div>
+  <% end %>
+<% end %>
+
+
+<%= form_tag edit_individual_shares_path do %>
+  <% @shares.each do |share| %>
   <div class="share-list-item">
     <div class="share-list-item-name">
-      <h3>
-        <% if share.currencyid.upcase == "EUR" %>
-          <span class="currency-eur"><%= "#{share.currencyid}" %></span>
-        <% elsif share.currencyid.upcase == "USD" %>
-          <span class="currency-usd"><%= "#{share.currencyid}" %></span>
-        <% else %>
-          <span class="currency"><%= "#{share.currencyid}" %></span>
-        <% end %>
-        <%= " - #{share.isin}" %>
-      </h3>
-      <p><%= "Currency S isin : #{share.currencyspecificisin}" %></p>
+        <%= check_box_tag "share_ids[]", share.id %>
     </div>
-    <div class="share-list-item-body">
-      <p><strong> <%= share.securityname %> </strong></p>
-      <p><%= "Nom du fonds : #{share.fundname}" %></p>
-    </div>
-    <div class="share-list-item-status">
-      <% if share.isbasecurrency then %>
-        <p class="status accepted">Base currency</p>
-      <% else %>
-        <p class="status declined">Other currency</p>
-      <% end %>
-      <p class="price"><%= share.isbasecurrency %></p>
+      <div class="share-list-item-body">
+        <p><strong> <%= share.securityname %> </strong></p>
+        <p><%= "Nom du fonds : #{share.fundname}" %></p>
     </div>
   </div>
+  <% end %>
+<%= submit_tag "Edit strategy", :class => "btn  btn-info" %>
 <% end %>

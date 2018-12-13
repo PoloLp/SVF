@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10">
+      <%= @share.fundname %>
+      <%= @share.isin %>
+      <% @share.reviews.each do |review|  %>
+        <h4>investment_strategy</h4>
+        <p><%= "#{review.investment_strategy}" %></p>
+        <h4>current_strategy</h4>
+        <p><%= "#{review.current_strategy}" %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
