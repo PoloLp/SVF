@@ -9,9 +9,25 @@ class SharesController < ApplicationController
     end
   end
 
-  def isin_search(isin_code)
-    fund_share = []
-    fund_share = Share.where(isin: isin_code)
-    return fund_share
+  def show
+    @share = Share.find(params[:id])
+  end
+
+  def edit_individual
+    # To fix *************************************************
+    flash[:notice] = "T'est dans edit_individual"
+    @shares = Share.find(params[:share_ids])
+  end
+
+  def update_edit_individual
+    flash[:notice] = "T'es dans update_edit_individual"
+    # byebug
+    # @shares = Share.update(params[:shares].keys, params[:shares].values).reject { |p| p.errors.empty? }
+    # if @shares.empty?
+    #   flash[:notice] = "Products updated"
+    #   redirect_to shares_url
+    # else
+    #   render :action => "edit_individual"
+    # end
   end
 end
