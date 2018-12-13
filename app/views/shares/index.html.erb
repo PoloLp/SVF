@@ -1,29 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
+    <div class="col-sm-12">
       <div id="Sharelist1">
-        <% @shares.each do |share| %>
-          <div class="share-list-item">
-            <div class="share-list-item-name">
-              <h3><%= "#{share.currencyid} - #{share.isin}" %></h3>
-              <p><%= "Currency specific isin : #{share.currencyspecificisin}" %></p>
-            </div>
-            <div class="share-list-item-body">
-              <p><strong> <%= share.securityname %> </strong></p>
-              <p><%= "Nom du fonds : #{share.fundname}" %></p>
-            </div>
-            <div class="share-list-item-status">
-              <p class="status accepted">Base currency</p>
-              <p class="price"><%= share.isbasecurrency %></p>
-            </div>
-          </div>
-        <% end %>
+        <%= render 'empty_result' unless !@shares.empty? %>
+        <%= "Code isin cherché : #{@isin_search}" %>
+        <%= render 'list_shares' %>
       </div>
     </div>
   </div>
 </div>
 
-<!--   <div class="row">
+<!-- <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
       <div id="Sharelist1">
         <#% @shares.each do |share| %>

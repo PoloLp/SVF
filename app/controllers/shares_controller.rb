@@ -3,8 +3,9 @@ class SharesController < ApplicationController
     if params[:query].present?
       sql_query = "isin ILIKE :query OR currencyspecificisin ILIKE :query"
       @shares = Share.where(sql_query, query: "%#{params[:query]}%")
+      @isin_search = params[:query]
     else
-      @shares = Share.all
+      @shares = []
     end
   end
 
