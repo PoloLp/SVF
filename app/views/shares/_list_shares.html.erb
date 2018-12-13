@@ -3,9 +3,11 @@
     <div class="share-list-item-name">
       <h3>
         <% if share.currencyid.upcase == "EUR" %>
-        <span class="currency-eur"><%= "#{share.currencyid}" %></span>
+          <span class="currency-eur"><%= "#{share.currencyid}" %></span>
         <% elsif share.currencyid.upcase == "USD" %>
-        <span class="currency-usd"><%= "#{share.currencyid}" %></span>
+          <span class="currency-usd"><%= "#{share.currencyid}" %></span>
+        <% else %>
+          <span class="currency"><%= "#{share.currencyid}" %></span>
         <% end %>
         <%= " - #{share.isin}" %>
       </h3>
