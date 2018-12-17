@@ -13,21 +13,28 @@ class SharesController < ApplicationController
     @share = Share.find(params[:id])
   end
 
-  def edit_individual
+  def edit_multiple_reviews
     # To fix *************************************************
-    flash[:notice] = "T'est dans edit_individual"
     @shares = Share.find(params[:share_ids])
   end
 
-  def update_edit_individual
-    flash[:notice] = "T'es dans update_edit_individual"
-    # byebug
-    # @shares = Share.update(params[:shares].keys, params[:shares].values).reject { |p| p.errors.empty? }
-    # if @shares.empty?
-    #   flash[:notice] = "Products updated"
-    #   redirect_to shares_url
-    # else
-    #   render :action => "edit_individual"
-    # end
+  def update_multiple_reviews
+
+    @shares = Share.find(params[:share_ids])
+
+    @shares.reject! do |share|
+      share.update_attributes(share_params.reject { |_k, v| v.blank? })
+    end
+    if @shares.empty?
+      redirect_to shares_path(@shares)
+      flash[:notice] = "MAJ Stratégies effectuée"
+    else
+      @share = Review.new(share_params)
+      redirect_to shares_path(@shares)
+    end
+  end
+
+  def share_params
+    params.require(:share).permit(:performanceid)
   end
 end

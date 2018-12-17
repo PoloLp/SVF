@@ -2,11 +2,13 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :shares, only: [:index, :show] do
-    collection do
-      post 'edit_individual'
-      put 'update_edit_individual'
+    resources :reviews, only: [ :new, :create ] do
+      collection do
+        post 'new_multiple'
+        put 'create_multiple'
+        post 'create_multiple'
+      end
     end
-    resources :reviews, only: [ :new, :create ]
   end
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

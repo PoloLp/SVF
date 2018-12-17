@@ -18,9 +18,39 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def new_multiple
+    # we need @share in our `simple_form_for`
+    @shares = Share.find(params[:share_ids])
+
+  end
+
+  def create_multiple
+    # we need `share_id` to asssociate review with corresponding share
+    @shares = Share.find(params[:share_ids])
+    # byebug
+    @shares.each do |share|
+      @review = Review.new(share_review_params)
+      @review.share = share
+      @review.save
+    end
+
+    redirect_to shares_path(@shares)
+    flash[:notice] = "MAJ Stratégies effectuée"
+
+    # if @review.save
+    #   redirect_to share_path(@share)
+    # else
+
+    # end
+  end
+
   private
 
   def review_params
     params.require(:review).permit(:investment_strategy, :current_strategy)
+  end
+
+  def share_review_params
+    params.require(:share).permit(:investment_strategy, :current_strategy)
   end
 end
