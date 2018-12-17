@@ -1,0 +1,1505 @@
+<TypeCodes>
+<TypeCodeDetail>
+<TypeCodeId>2093</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>AED</TypeCode>
+<Definition>UAE Dirham</Definition>
+<Definition_French>Dirham (Emirats Arabes Unis)</Definition_French>
+<Definition_Spanish>Dirham (Emiratos Árabes Unidos)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2095</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>AFN</TypeCode>
+<Definition>Afghani</Definition>
+<Definition_French>Afghani                                 </Definition_French>
+<Definition_Spanish>Afgani afgano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2096</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ALL</TypeCode>
+<Definition>Lek</Definition>
+<Definition_French>Lek Albanien</Definition_French>
+<Definition_Spanish>Lek albanés</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2097</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>AMD</TypeCode>
+<Definition>Armenian Dram</Definition>
+<Definition_French>Dram Arménien</Definition_French>
+<Definition_Spanish>Dram armenio</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2098</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ANG</TypeCode>
+<Definition>Netherlands Antillian Guilder</Definition>
+<Definition_French>Florin Antilles Néerlandaises</Definition_French>
+<Definition_Spanish>Florín de las Antillas Holandesas</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2099</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>AOA</TypeCode>
+<Definition>Kwanza</Definition>
+<Definition_French>Kwanza                                  </Definition_French>
+<Definition_Spanish>Kwanza angoleño</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2104</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ARS</TypeCode>
+<Definition>Argentine Peso</Definition>
+<Definition_French>Nuevo Peso argentin</Definition_French>
+<Definition_Spanish>Peso Argentino</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2106</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>AUD</TypeCode>
+<Definition>Australian Dollar</Definition>
+<Definition_French>Dollar Australien</Definition_French>
+<Definition_Spanish>Dólar australiano</Definition_Spanish>
+<Definition_Chinese>澳元</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2107</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>AWG</TypeCode>
+<Definition>Aruban Guilder</Definition>
+<Definition_French>Florin Aruba</Definition_French>
+<Definition_Spanish>Florín arubeсo</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2109</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>AZN</TypeCode>
+<Definition>Azerbaijanian Manat</Definition>
+<Definition_French>Azerbaijanian Manat                     </Definition_French>
+<Definition_Spanish>Manat azerbaiyano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2110</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BAM</TypeCode>
+<Definition>Convertible Marks</Definition>
+<Definition_French>Convertible Marks                       </Definition_French>
+<Definition_Spanish>Marco convertible de Bosnia-Herzegovina</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2111</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BBD</TypeCode>
+<Definition>Barbados Dollar</Definition>
+<Definition_French>Dollar Barbade</Definition_French>
+<Definition_Spanish>Dólar de Barbados</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2112</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BDT</TypeCode>
+<Definition>Taka</Definition>
+<Definition_French>Taka bangladais</Definition_French>
+<Definition_Spanish>Taka de Bangladesh</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2117</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BGN</TypeCode>
+<Definition>Bulgarian Lev</Definition>
+<Definition_French>Lev bulgare</Definition_French>
+<Definition_Spanish>Lev búlgaro</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2118</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BHD</TypeCode>
+<Definition>Bahraini Dinar</Definition>
+<Definition_French>Dinar Bahreïn</Definition_French>
+<Definition_Spanish>Dinar de Bahrein</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2119</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BIF</TypeCode>
+<Definition>Burundi Franc</Definition>
+<Definition_French>Franc Burundi</Definition_French>
+<Definition_Spanish>Franco burundés</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2120</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BMD</TypeCode>
+<Definition>Bermudian Dollar (or Bermuda Dollar)</Definition>
+<Definition_French>Dollar Bermudes</Definition_French>
+<Definition_Spanish>Dуlar de Bermuda</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2121</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BND</TypeCode>
+<Definition>Brunei Dollar</Definition>
+<Definition_French>Dollar Brunei</Definition_French>
+<Definition_Spanish>Dólar de Brunei</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2122</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BOB</TypeCode>
+<Definition>Boliviano</Definition>
+<Definition_French>Boliviano bolivien</Definition_French>
+<Definition_Spanish>Boliviano de Bolivia</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2124</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BOV</TypeCode>
+<Definition>Mvdol</Definition>
+<Definition_French>Mvdol                                   </Definition_French>
+<Definition_Spanish>Mvdol boliviano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2126</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BRL</TypeCode>
+<Definition>Brazilian Real</Definition>
+<Definition_French>Real brésilien</Definition_French>
+<Definition_Spanish>Real brasileño</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2127</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BSD</TypeCode>
+<Definition>Bahamian Dollar</Definition>
+<Definition_French>Dollar bahamien</Definition_French>
+<Definition_Spanish>Dуlar de Bahamas</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2128</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BTN</TypeCode>
+<Definition>Ngultrum</Definition>
+<Definition_French>Ngultrum                                </Definition_French>
+<Definition_Spanish>Ngultrum de Bután</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2130</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BWP</TypeCode>
+<Definition>Pula</Definition>
+<Definition_French>Pula botswanais</Definition_French>
+<Definition_Spanish>Pula Botswana</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2133</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BZD</TypeCode>
+<Definition>Belize Dollar</Definition>
+<Definition_French>Dollar Belize</Definition_French>
+<Definition_Spanish>Dólar de Belice</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2134</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CAD</TypeCode>
+<Definition>Canadian Dollar</Definition>
+<Definition_French>Dollar Canadien</Definition_French>
+<Definition_Spanish>Dólar canadiense</Definition_Spanish>
+<Definition_Chinese>加元</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2135</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CDF</TypeCode>
+<Definition>Franc Congolais</Definition>
+<Definition_French>Franc Congolais</Definition_French>
+<Definition_Spanish>Franco congoleño</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2136</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CHE</TypeCode>
+<Definition>WIR Euro</Definition>
+<Definition_French>WIR Euro                                </Definition_French>
+<Definition_Spanish>WIR Euro</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2137</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CHF</TypeCode>
+<Definition>Swiss Franc</Definition>
+<Definition_French>Franc Suisse</Definition_French>
+<Definition_Spanish>Franco suizo</Definition_Spanish>
+<Definition_Chinese>瑞士法郎</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2138</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CHW</TypeCode>
+<Definition>WIR Franc</Definition>
+<Definition_French>WIR Franc                               </Definition_French>
+<Definition_Spanish>WIR Franco</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2139</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CLF</TypeCode>
+<Definition>Unidades de formento</Definition>
+<Definition_French>Unidades de formento                    </Definition_French>
+<Definition_Spanish>Unidades de fomento chilenas</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2140</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CLP</TypeCode>
+<Definition>Chilean Peso</Definition>
+<Definition_French>Peso chilien</Definition_French>
+<Definition_Spanish>Peso chileno</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2141</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CNY</TypeCode>
+<Definition>Yuan Renminbi</Definition>
+<Definition_French>Yuan Renminbi Chinois</Definition_French>
+<Definition_Spanish>Yuan chino</Definition_Spanish>
+<Definition_Chinese>人民幣</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2142</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>COP</TypeCode>
+<Definition>Colombian Peso</Definition>
+<Definition_French>Peso colombien</Definition_French>
+<Definition_Spanish>Peso colombiano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2143</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>COU</TypeCode>
+<Definition>Unidad de Valor Real</Definition>
+<Definition_French>Unidad de Valor Real                    </Definition_French>
+<Definition_Spanish>Unidad de valor real colombiana (añadida al COP)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2144</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CRC</TypeCode>
+<Definition>Costa Rican Colon</Definition>
+<Definition_French>Costa Rican Colon                       </Definition_French>
+<Definition_Spanish>Colón costarricense</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2147</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CUP</TypeCode>
+<Definition>Cuban Peso</Definition>
+<Definition_French>Peso cubain</Definition_French>
+<Definition_Spanish>Peso cubano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2148</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CVE</TypeCode>
+<Definition>Cape Verde Escudo</Definition>
+<Definition_French>Cape Verde Escudo                       </Definition_French>
+<Definition_Spanish>Escudo caboverdiano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2150</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CZK</TypeCode>
+<Definition>Czech Koruna</Definition>
+<Definition_French>Couronne tchèque</Definition_French>
+<Definition_Spanish>Corona checa</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2153</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>DJF</TypeCode>
+<Definition>Djibouti Franc</Definition>
+<Definition_French>Djibouti Franc                          </Definition_French>
+<Definition_Spanish>Franco yibutiano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2154</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>DKK</TypeCode>
+<Definition>Danish Krone</Definition>
+<Definition_French>Couronne Danoise</Definition_French>
+<Definition_Spanish>Corona danesa</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2155</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>DOP</TypeCode>
+<Definition>Dominican Peso</Definition>
+<Definition_French>Peso dominicain</Definition_French>
+<Definition_Spanish>Peso dominicano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2156</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>DZD</TypeCode>
+<Definition>Algerian Dinar</Definition>
+<Definition_French>Dinar Algérien</Definition_French>
+<Definition_Spanish>Dinar argelino</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2159</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>EEK</TypeCode>
+<Definition>Kroon</Definition>
+<Definition_French>Kron estonien</Definition_French>
+<Definition_Spanish>Corona estoniana</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2160</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>EGP</TypeCode>
+<Definition>Egyptian Pound</Definition>
+<Definition_French>Livre égyptienne</Definition_French>
+<Definition_Spanish>Libra egipcia</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2161</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ERN</TypeCode>
+<Definition>Nakfa</Definition>
+<Definition_French>Nakfa                                   </Definition_French>
+<Definition_Spanish>Nakfa eritreo</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2165</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ETB</TypeCode>
+<Definition>Ethiopian Birr</Definition>
+<Definition_French>Ethiopian Birr                          </Definition_French>
+<Definition_Spanish>Birr etíope</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2166</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>EUR</TypeCode>
+<Definition>Euro</Definition>
+<Definition_French>Euro</Definition_French>
+<Definition_Spanish>Euro</Definition_Spanish>
+<Definition_Chinese>歐羅</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2168</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>FJD</TypeCode>
+<Definition>Fiji Dollar</Definition>
+<Definition_French>Dollar Iles Fiji</Definition_French>
+<Definition_Spanish>Dólar de Fiji</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2169</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>FKP</TypeCode>
+<Definition>Falkland Islands Pound</Definition>
+<Definition_French>Livre Iles Falkland</Definition_French>
+<Definition_Spanish>Libra malvinense</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2171</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>GBP</TypeCode>
+<Definition>Pound Sterling</Definition>
+<Definition_French>Livre Sterling</Definition_French>
+<Definition_Spanish>Libra esterlina</Definition_Spanish>
+<Definition_Chinese>英鎊</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2172</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>GEL</TypeCode>
+<Definition>Lari</Definition>
+<Definition_French>Lari                                    </Definition_French>
+<Definition_Spanish>Lari georgiano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2174</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>GIP</TypeCode>
+<Definition>Gibraltar Pound</Definition>
+<Definition_French>Livre Gibraltar</Definition_French>
+<Definition_Spanish>Libra gibraltareña</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2175</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>GMD</TypeCode>
+<Definition>Dalasi</Definition>
+<Definition_French>Dalasi Gambie</Definition_French>
+<Definition_Spanish>Dalasi gambiano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2176</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>GNF</TypeCode>
+<Definition>Guinea Franc</Definition>
+<Definition_French>Franc Guinéen </Definition_French>
+<Definition_Spanish>Guinea francesa</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2180</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>GTQ</TypeCode>
+<Definition>Quetzal</Definition>
+<Definition_French>Quetzal                                 </Definition_French>
+<Definition_Spanish>Quetzal guatemalteco</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2182</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>GYD</TypeCode>
+<Definition>Guyana Dollar</Definition>
+<Definition_French>Dollar Guyanais</Definition_French>
+<Definition_Spanish>Dólar guyanés</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2183</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>HKD</TypeCode>
+<Definition>Hong Kong Dollar</Definition>
+<Definition_French>Dollar Hong Kong</Definition_French>
+<Definition_Spanish>Dólar de Hong Kong</Definition_Spanish>
+<Definition_Chinese>港元</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2184</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>HNL</TypeCode>
+<Definition>Lempira</Definition>
+<Definition_French>Lempira Honduras</Definition_French>
+<Definition_Spanish>Lempira hondureño</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2185</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>HRK</TypeCode>
+<Definition>Croatian Kuna</Definition>
+<Definition_French>Kuna croate</Definition_French>
+<Definition_Spanish>Kuna croata</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2186</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>HTG</TypeCode>
+<Definition>Gourde</Definition>
+<Definition_French>Gourde                                  </Definition_French>
+<Definition_Spanish>Gourde haitiano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2187</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>HUF</TypeCode>
+<Definition>Forint</Definition>
+<Definition_French>Forint hongrois</Definition_French>
+<Definition_Spanish>Florín húngaro</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2188</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>IDR</TypeCode>
+<Definition>Rupiah</Definition>
+<Definition_French>Roupie indonésienne</Definition_French>
+<Definition_Spanish>Rupia Indonesia</Definition_Spanish>
+<Definition_Chinese>印尼盾</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2190</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ILS</TypeCode>
+<Definition>New Israeli Sheqel</Definition>
+<Definition_French>Shekel israélien</Definition_French>
+<Definition_Spanish>Shekel israelí</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2191</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>INR</TypeCode>
+<Definition>Indian Rupee</Definition>
+<Definition_French>Roupie indienne</Definition_French>
+<Definition_Spanish>Rupia India</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2192</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>IQD</TypeCode>
+<Definition>Iraqi Dinar</Definition>
+<Definition_French>Dinar Iraquien</Definition_French>
+<Definition_Spanish>Dinar iraquí</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2193</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>IRR</TypeCode>
+<Definition>Iranian Rial</Definition>
+<Definition_French>Riyal iranien</Definition_French>
+<Definition_Spanish>Rial iraní</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2194</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ISK</TypeCode>
+<Definition>Iceland Krona</Definition>
+<Definition_French>Couronne islandaise</Definition_French>
+<Definition_Spanish>Corona islandesa</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2196</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>JMD</TypeCode>
+<Definition>Jamaican Dollar</Definition>
+<Definition_French>Dollar jamaïcain</Definition_French>
+<Definition_Spanish>Dуlar jamaicano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2197</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>JOD</TypeCode>
+<Definition>Jordanian Dinar</Definition>
+<Definition_French>Dinar jordanien</Definition_French>
+<Definition_Spanish>Dinar jordano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2198</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>JPY</TypeCode>
+<Definition>Yen</Definition>
+<Definition_French>Yen Japonais</Definition_French>
+<Definition_Spanish>Yen japonés</Definition_Spanish>
+<Definition_Chinese>日圓</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2199</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>KES</TypeCode>
+<Definition>Kenyan Shilling</Definition>
+<Definition_French>Shilling kenyan</Definition_French>
+<Definition_Spanish>Chelín de Kenia</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2200</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>KGS</TypeCode>
+<Definition>Som</Definition>
+<Definition_French>Som                                     </Definition_French>
+<Definition_Spanish>Som de Kirguizistán</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2201</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>KHR</TypeCode>
+<Definition>Riel</Definition>
+<Definition_French>Riel                                    </Definition_French>
+<Definition_Spanish>Riel camboyano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2202</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>KMF</TypeCode>
+<Definition>Comoro Franc</Definition>
+<Definition_French>Comoro Franc                            </Definition_French>
+<Definition_Spanish>Franco comoriano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2203</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>KPW</TypeCode>
+<Definition>North Korean Won</Definition>
+<Definition_French>North Korean Won                        </Definition_French>
+<Definition_Spanish>Won norcoreano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2204</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>KRW</TypeCode>
+<Definition>Won</Definition>
+<Definition_French>Wong de Corée du Sud</Definition_French>
+<Definition_Spanish>Won (Corea del Sur)</Definition_Spanish>
+<Definition_Chinese>南韓圜</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2205</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>KWD</TypeCode>
+<Definition>Kuwaiti Dinar</Definition>
+<Definition_French>Dinar koweitien</Definition_French>
+<Definition_Spanish>Dinar kuwaití</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2206</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>KYD</TypeCode>
+<Definition>Cayman Islands Dollar</Definition>
+<Definition_French>Dollar Iles Cayman</Definition_French>
+<Definition_Spanish>Dуlar de Caimán</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2207</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>KZT</TypeCode>
+<Definition>Tenge</Definition>
+<Definition_French>Tenge Kazakhstan</Definition_French>
+<Definition_Spanish>Tenge kazajo</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2208</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>LAK</TypeCode>
+<Definition>Kip</Definition>
+<Definition_French>Kip                                     </Definition_French>
+<Definition_Spanish>Kip lao</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2209</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>LBP</TypeCode>
+<Definition>Lebanese Pound</Definition>
+<Definition_French>Livre libanaise</Definition_French>
+<Definition_Spanish>Libra Libanesa</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2210</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>LKR</TypeCode>
+<Definition>Sri Lanka Rupee</Definition>
+<Definition_French>Roupie sri-lankaise</Definition_French>
+<Definition_Spanish>Rupia de Sri Lanka</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2211</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>LRD</TypeCode>
+<Definition>Liberian Dollar</Definition>
+<Definition_French>Dollar libanais</Definition_French>
+<Definition_Spanish>Dólar liberiano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2212</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>LSL</TypeCode>
+<Definition>Loti</Definition>
+<Definition_French>Loti                                    </Definition_French>
+<Definition_Spanish>Loti de Lesotho</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2214</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>LTL</TypeCode>
+<Definition>Lithuanian Litas</Definition>
+<Definition_French>Litas lithuanien</Definition_French>
+<Definition_Spanish>Lita lituana</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2216</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>LVL</TypeCode>
+<Definition>Latvian Lats</Definition>
+<Definition_French>Lats letton</Definition_French>
+<Definition_Spanish>Lat letón</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2217</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>LYD</TypeCode>
+<Definition>Libyan Dinar</Definition>
+<Definition_French>Dinar Libyen</Definition_French>
+<Definition_Spanish>Dinar libio</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2218</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MAD</TypeCode>
+<Definition>Moroccan Dirham</Definition>
+<Definition_French>Dirham marocain</Definition_French>
+<Definition_Spanish>Dirham marroquí</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2219</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MDL</TypeCode>
+<Definition>Moldovan Leu</Definition>
+<Definition_French>Moldovan Leu                            </Definition_French>
+<Definition_Spanish>Leu moldavo</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2220</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MGA</TypeCode>
+<Definition>Malagasy Ariary</Definition>
+<Definition_French>Malagasy Ariary                         </Definition_French>
+<Definition_Spanish>Ariary de Madagascar</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2222</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MKD</TypeCode>
+<Definition>Denar</Definition>
+<Definition_French>Denar                                   </Definition_French>
+<Definition_Spanish>Denar macedonio</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2224</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MMK</TypeCode>
+<Definition>Kyat</Definition>
+<Definition_French>Kyat                                    </Definition_French>
+<Definition_Spanish>Kyat myanmaro</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2225</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MNT</TypeCode>
+<Definition>Tugrik</Definition>
+<Definition_French>Tugrik                                  </Definition_French>
+<Definition_Spanish>Tughrik mongol</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2226</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MOP</TypeCode>
+<Definition>Pataca</Definition>
+<Definition_French>Pataca                                  </Definition_French>
+<Definition_Spanish>Pataca de Macao</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2227</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MRO</TypeCode>
+<Definition>Ouguiya</Definition>
+<Definition_French>Ouguiya mauritanien</Definition_French>
+<Definition_Spanish>Ouguiya mauritana</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2230</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MUR</TypeCode>
+<Definition>Mauritius Rupee</Definition>
+<Definition_French>Roupie Ile Maurice</Definition_French>
+<Definition_Spanish>Rupia de Mauricio</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2231</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MWK</TypeCode>
+<Definition>Kwacha</Definition>
+<Definition_French>Malawi</Definition_French>
+<Definition_Spanish>Kwacha malawi</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2232</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MVR</TypeCode>
+<Definition>Rufiyaa</Definition>
+<Definition_French>Rufiyaa                                 </Definition_French>
+<Definition_Spanish>Rufiyaa maldiva</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2233</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MXN</TypeCode>
+<Definition>Mexican Peso</Definition>
+<Definition_French>Nouveau Peso mexicain</Definition_French>
+<Definition_Spanish>Peso mejicano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2235</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MXV</TypeCode>
+<Definition>Mexican Unidad de Inversion (UID)</Definition>
+<Definition_French>Mexican Unidad de Inversion (UID)       </Definition_French>
+<Definition_Spanish>Unidad de Inversión (UDI) mexicana</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2236</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MYR</TypeCode>
+<Definition>Malaysian Ringgit</Definition>
+<Definition_French>Ringgit malaisien</Definition_French>
+<Definition_Spanish>Ringgit de Malasia</Definition_Spanish>
+<Definition_Chinese>馬來西亞元</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2238</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>MZN</TypeCode>
+<Definition>Mozambique, Meticais</Definition>
+<Definition_French>Mozambique, Meticais                    </Definition_French>
+<Definition_Spanish>Metical mozambiqueño</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2239</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>NAD</TypeCode>
+<Definition>Namibian Dollar</Definition>
+<Definition_French>Dollar namibien</Definition_French>
+<Definition_Spanish>Dólar namibio</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2240</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>NGN</TypeCode>
+<Definition>Naira</Definition>
+<Definition_French>Naira nigérien</Definition_French>
+<Definition_Spanish>Naira nigeriana</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2242</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>NIO</TypeCode>
+<Definition>Cordoba Oro</Definition>
+<Definition_French>Cordoba Oro                             </Definition_French>
+<Definition_Spanish>Córdoba nicaragüense</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2244</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>NOK</TypeCode>
+<Definition>Norwegian Krone</Definition>
+<Definition_French>Couronne Norvégienne</Definition_French>
+<Definition_Spanish>Corona noruega</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2245</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>NPR</TypeCode>
+<Definition>Nepalese Rupee</Definition>
+<Definition_French>Roupie népalaise</Definition_French>
+<Definition_Spanish>Rupia nepalesa</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2246</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>NZD</TypeCode>
+<Definition>New Zealand Dollar</Definition>
+<Definition_French>Dollar Néo-Zélandais</Definition_French>
+<Definition_Spanish>Dólar neozelandés</Definition_Spanish>
+<Definition_Chinese>紐元</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2247</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>OMR</TypeCode>
+<Definition>Rial Omani</Definition>
+<Definition_French>Rial Oman</Definition_French>
+<Definition_Spanish>Rial omaní</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2248</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>PAB</TypeCode>
+<Definition>Balboa</Definition>
+<Definition_French>Balboa panaméen</Definition_French>
+<Definition_Spanish>Balboa panameño</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2249</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>PEN</TypeCode>
+<Definition>Nuevo Sol</Definition>
+<Definition_French>Nouveau Sol péruvien</Definition_French>
+<Definition_Spanish>Sol peruano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2251</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>PGK</TypeCode>
+<Definition>Kina</Definition>
+<Definition_French>Kina papouan-néo-guinéen</Definition_French>
+<Definition_Spanish>Kina (Papua Nueva Guinea)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2252</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>PHP</TypeCode>
+<Definition>Philippine Peso</Definition>
+<Definition_French>Peso philippin</Definition_French>
+<Definition_Spanish>Peso filipino</Definition_Spanish>
+<Definition_Chinese>菲律賓披索</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2253</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>PKR</TypeCode>
+<Definition>Pakistan Rupee</Definition>
+<Definition_French>Roupie pakistanaise</Definition_French>
+<Definition_Spanish>Rupia de Pakistán</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2254</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>PLN</TypeCode>
+<Definition>Zloty</Definition>
+<Definition_French>Zloty polonais</Definition_French>
+<Definition_Spanish>Zloty polaco</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2257</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>PYG</TypeCode>
+<Definition>Guarani</Definition>
+<Definition_French>Guarano Paraguay</Definition_French>
+<Definition_Spanish>Guaraní paraguayo</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2258</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>QAR</TypeCode>
+<Definition>Qatari Rial</Definition>
+<Definition_French>Rial Qatar</Definition_French>
+<Definition_Spanish>Rial qatarí</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2259</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ROL</TypeCode>
+<Definition>Old Leu</Definition>
+<Definition_French>Leu roumain</Definition_French>
+<Definition_Spanish>Leu rumano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2260</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>RON</TypeCode>
+<Definition>Romanian Leu</Definition>
+<Definition_French>New Leu                                 </Definition_French>
+<Definition_Spanish>Leu rumano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2261</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>RSD</TypeCode>
+<Definition>Serbian Dinar</Definition>
+<Definition_French>Dinar Serbe</Definition_French>
+<Definition_Spanish>Dinar Serbio</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2262</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>RUB</TypeCode>
+<Definition>Russian Ruble</Definition>
+<Definition_French>Rouble russe</Definition_French>
+<Definition_Spanish>Rublo ruso</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2264</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>RWF</TypeCode>
+<Definition>Rwanda Franc</Definition>
+<Definition_French>Franc Rwandais</Definition_French>
+<Definition_Spanish>Franco ruandés</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2265</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SAR</TypeCode>
+<Definition>Saudi Riyal</Definition>
+<Definition_French>Riyal saoudien</Definition_French>
+<Definition_Spanish>Rial saudí</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2266</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SBD</TypeCode>
+<Definition>Solomon Islands Dollar</Definition>
+<Definition_French>Dollar Iles Salomon</Definition_French>
+<Definition_Spanish>Dólar de las Islas Salomón</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2267</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SCR</TypeCode>
+<Definition>Seychelles Rupee</Definition>
+<Definition_French>Roupie Seychelles</Definition_French>
+<Definition_Spanish>Rupia de Seychelles</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2270</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SEK</TypeCode>
+<Definition>Swedish Krona</Definition>
+<Definition_French>Couronne Suédoise</Definition_French>
+<Definition_Spanish>Corona sueca</Definition_Spanish>
+<Definition_Chinese>瑞典克朗</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2271</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SGD</TypeCode>
+<Definition>Singapore Dollar</Definition>
+<Definition_French>Dollar de Singapour</Definition_French>
+<Definition_Spanish>Dólar de Singapur</Definition_Spanish>
+<Definition_Chinese>新加坡元</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2272</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SHP</TypeCode>
+<Definition>Saint Helena Pound</Definition>
+<Definition_French>Livre Saint Helena</Definition_French>
+<Definition_Spanish>Libra de Santa Helena</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2275</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SLL</TypeCode>
+<Definition>Leone</Definition>
+<Definition_French>Leone                                   </Definition_French>
+<Definition_Spanish>Leone de Sierra Leona</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2276</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SOS</TypeCode>
+<Definition>Somali Shilling</Definition>
+<Definition_French>Somali Shilling                         </Definition_French>
+<Definition_Spanish>Chelín somalí</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2277</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SRD</TypeCode>
+<Definition>Surinam Dollar</Definition>
+<Definition_French>Dollar Suriname</Definition_French>
+<Definition_Spanish>Dólar surinamés</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2279</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>STD</TypeCode>
+<Definition>Dobra</Definition>
+<Definition_French>Dobra                                   </Definition_French>
+<Definition_Spanish>Dobra de Santo Tomé y Príncipe</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2282</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SYP</TypeCode>
+<Definition>Syrian Pound</Definition>
+<Definition_French>Livre Syrienne</Definition_French>
+<Definition_Spanish>Libra siria</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2283</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SZL</TypeCode>
+<Definition>Lilangeni</Definition>
+<Definition_French>Lilangeni                               </Definition_French>
+<Definition_Spanish>Lilangeni suazi (de Suazilandia)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2284</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>THB</TypeCode>
+<Definition>Baht</Definition>
+<Definition_French>Baht thaïlandais</Definition_French>
+<Definition_Spanish>Bath tailandés</Definition_Spanish>
+<Definition_Chinese>泰銖</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2286</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>TJS</TypeCode>
+<Definition>Somoni</Definition>
+<Definition_French>Somoni                                  </Definition_French>
+<Definition_Spanish>Somoni tayik (de Tayikistán)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2288</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>TND</TypeCode>
+<Definition>Tunisian Dinar</Definition>
+<Definition_French>Dinar tunisien</Definition_French>
+<Definition_Spanish>Dinar tunecino</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2289</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>TOP</TypeCode>
+<Definition>Pa'anga</Definition>
+<Definition_French>Pa'anga                                 </Definition_French>
+<Definition_Spanish>Pa'anga tongano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2292</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>TRY</TypeCode>
+<Definition>Turkish Lira</Definition>
+<Definition_French>Lire Turque</Definition_French>
+<Definition_Spanish>Lira Turca</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2293</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>TTD</TypeCode>
+<Definition>Trinidad and Tobago Dollar</Definition>
+<Definition_French>Dollar Trinidad et Tobago</Definition_French>
+<Definition_Spanish>Dólar de Trinidad y Tobago</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2294</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>TWD</TypeCode>
+<Definition>New Taiwan Dollar</Definition>
+<Definition_French>Nouveau Dollar de Taïwan</Definition_French>
+<Definition_Spanish>Dólar de Taiwán</Definition_Spanish>
+<Definition_Chinese>新台幣</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2295</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>TZS</TypeCode>
+<Definition>Tanzanian Shilling</Definition>
+<Definition_French>Schilling tanzanien</Definition_French>
+<Definition_Spanish>Chelín de Tanzania</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2296</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>UAH</TypeCode>
+<Definition>Hryvnia</Definition>
+<Definition_French>Hryvnia ukrainien</Definition_French>
+<Definition_Spanish>Hryvnia ucraniano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2298</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>UGX</TypeCode>
+<Definition>Uganda Shilling</Definition>
+<Definition_French>Schilling ougandais</Definition_French>
+<Definition_Spanish>Chelín ugandés</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2299</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>USD</TypeCode>
+<Definition>US Dollar</Definition>
+<Definition_French>Dollar US</Definition_French>
+<Definition_Spanish>Dólar americano</Definition_Spanish>
+<Definition_Chinese>美元</Definition_Chinese>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2300</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>USN</TypeCode>
+<Definition>US Dollar (Next day)</Definition>
+<Definition_French>Dollar US (jour d'après)</Definition_French>
+<Definition_Spanish>Dólar americano (día siguiente)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2301</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>USS</TypeCode>
+<Definition>US Dollar (Same day)</Definition>
+<Definition_French>Dollar US (même jour)</Definition_French>
+<Definition_Spanish>Dólar americano (mismo día)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2303</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>UYU</TypeCode>
+<Definition>Peso Uruguayo</Definition>
+<Definition_French>Peso Uruguay</Definition_French>
+<Definition_Spanish>Peso uruguayo</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2304</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>UZS</TypeCode>
+<Definition>Uzbekistan Sum</Definition>
+<Definition_French>Uzbekistan Sum                          </Definition_French>
+<Definition_Spanish>Sum uzbeco</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2306</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>VND</TypeCode>
+<Definition>Dong</Definition>
+<Definition_French>Dong vietnamien</Definition_French>
+<Definition_Spanish>Dong vietnamita</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2307</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>WST</TypeCode>
+<Definition>Tala</Definition>
+<Definition_French>Tala                                    </Definition_French>
+<Definition_Spanish>Tala samoana</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2308</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>VUV</TypeCode>
+<Definition>Vatu</Definition>
+<Definition_French>Vatu (Vanuatu)</Definition_French>
+<Definition_Spanish>Vatu (Vanuatu)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2309</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XAF</TypeCode>
+<Definition>CFA Franc BEAC</Definition>
+<Definition_French>CFA Franc BEAC                          </Definition_French>
+<Definition_Spanish>Franco CFA</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2310</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XAG</TypeCode>
+<Definition>Silver</Definition>
+<Definition_French>Silver                                  </Definition_French>
+<Definition_Spanish>Plata</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2311</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XAU</TypeCode>
+<Definition>Gold</Definition>
+<Definition_French>Euro (Anc. Schilling autrichien)</Definition_French>
+<Definition_Spanish>Euro (antes Chelín austriaco)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2312</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XBA</TypeCode>
+<Definition>Bd Mrkts Units European Comp Unit(EURCO)</Definition>
+<Definition_French>Bd Mrkts Units European Comp Unit(EURCO)</Definition_French>
+<Definition_Spanish>
+European Composite Unit (EURCO) (Bonds market unit)
+</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2313</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XBB</TypeCode>
+<Definition>European Monetary Unit (E.M.U.-6)</Definition>
+<Definition_French>European Monetary Unit (E.M.U.-6)       </Definition_French>
+<Definition_Spanish>
+European Monetary Unit (E.M.U.-6) (Bonds market unit)
+</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2314</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XBC</TypeCode>
+<Definition>European Unit of Account 9(E.U.A.-9)</Definition>
+<Definition_French>European Unit of Account 9(E.U.A.-9)    </Definition_French>
+<Definition_Spanish>European Unit of Account 9(E.U.A.-9)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2315</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XBD</TypeCode>
+<Definition>European Unit of Account 17(E.U.A.-17)</Definition>
+<Definition_French>European Unit of Account 17(E.U.A.-17)  </Definition_French>
+<Definition_Spanish>European Unit of Account 17(E.U.A.-17)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2316</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XCD</TypeCode>
+<Definition>East Caribbean Dollar</Definition>
+<Definition_French>Dollar Anguillais</Definition_French>
+<Definition_Spanish>Dólar de Anguila</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2317</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XDR</TypeCode>
+<Definition>SDR</Definition>
+<Definition_French>Special Drawing Rights</Definition_French>
+<Definition_Spanish>Special Drawing Rights</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2320</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XFO</TypeCode>
+<Definition>Gold-Franc</Definition>
+<Definition_French>Gold-Franc                              </Definition_French>
+<Definition_Spanish>Franco de oro (Special settlement currency)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2321</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XFU</TypeCode>
+<Definition>UIC-Franc</Definition>
+<Definition_French>UIC-Franc                               </Definition_French>
+<Definition_Spanish>Franco UIC (Special settlement currency)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2322</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XOF</TypeCode>
+<Definition>CFA Franc BCEAO</Definition>
+<Definition_French>Franc Cote d'Ivoire</Definition_French>
+<Definition_Spanish>Franco CFA</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2323</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XPD</TypeCode>
+<Definition>Palladium</Definition>
+<Definition_French>Palladium                               </Definition_French>
+<Definition_Spanish>Onza de paladio</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2324</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XPF</TypeCode>
+<Definition>CFP Franc</Definition>
+<Definition_French>CFP Franc                               </Definition_French>
+<Definition_Spanish>Franco CFP</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2325</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XPT</TypeCode>
+<Definition>Platinum</Definition>
+<Definition_French>Euro (Anc. Escudo portugais)</Definition_French>
+<Definition_Spanish>Euro (antes Escudo portugués)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2326</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XTS</TypeCode>
+<Definition>Reserved for testing purposes</Definition>
+<Definition_French>Reserved for testing purposes           </Definition_French>
+<Definition_Spanish>Reservado para pruebas</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2327</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>XXX</TypeCode>
+<Definition>Currency not involved</Definition>
+<Definition_French>(inconnu)</Definition_French>
+<Definition_Spanish>Sin definir</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2329</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>YER</TypeCode>
+<Definition>Yemeni Rial</Definition>
+<Definition_French>Yemeni Rial                             </Definition_French>
+<Definition_Spanish>Rial yemení</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2333</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ZAR</TypeCode>
+<Definition>Rand</Definition>
+<Definition_French>Rand sud-africain</Definition_French>
+<Definition_Spanish>Rand sudafricano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>2334</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ZMK</TypeCode>
+<Definition>Kwacha</Definition>
+<Definition_French>Kwacha zambien</Definition_French>
+<Definition_Spanish>Kwacha de Zambia</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>6208</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>$$$</TypeCode>
+<Definition>Multiple Currencies</Definition>
+<Definition_French>Multiple Currencies                     </Definition_French>
+<Definition_Spanish>Multiple Currencies</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>7299</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>VEF</TypeCode>
+<Definition>Venezuelan Bolivar Fuerte</Definition>
+<Definition_French>Venezuelan Bolivar Fuerte               </Definition_French>
+<Definition_Spanish>Bolívar fuerte venezolano</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>12220</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>GBX</TypeCode>
+<Definition>Pence Sterling</Definition>
+<Definition_French>Pence (Livre Sterling ×100)</Definition_French>
+<Definition_Spanish>Peniques (Reino Unido)</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>12221</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>GHS</TypeCode>
+<Definition>Cedi</Definition>
+<Definition_French>Cedi                                    </Definition_French>
+<Definition_Spanish>Cedi</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>12243</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SDG</TypeCode>
+<Definition>Sudanese Dinar</Definition>
+<Definition_French>Dinar Soudanais</Definition_French>
+<Definition_Spanish>Dinar Sudanés</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>12246</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>SKK</TypeCode>
+<Definition>Slovak Koruna</Definition>
+<Definition_French>Couronne slovaque</Definition_French>
+<Definition_Spanish>Corona eslovaca</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>12252</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>TMT</TypeCode>
+<Definition>Turkmenistan New Manat</Definition>
+<Definition_French>Turkmenistan New Manat                  </Definition_French>
+<Definition_Spanish>Nuevo Manat de Turqmenistán</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>12269</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ZWD</TypeCode>
+<Definition>Zimbabwe Dollar</Definition>
+<Definition_French>Dollar Zimbabwe</Definition_French>
+<Definition_Spanish>Dólar zimbabuense</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>12271</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ZWR</TypeCode>
+<Definition>Zimbabwe Dollar</Definition>
+<Definition_French>Dollar Zimbabwe</Definition_French>
+<Definition_Spanish>Dólar zimbabuense</Definition_Spanish>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>540087</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>CNH</TypeCode>
+<Definition>Offshore Chinese Yuan</Definition>
+<Definition_French>Offshore Chinese Yuan</Definition_French>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>723098</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>ZMW</TypeCode>
+<Definition>Zambian Kwacha</Definition>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>731766</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>BYN</TypeCode>
+<Definition>Belarusian Ruble</Definition>
+</TypeCodeDetail>
+<TypeCodeDetail>
+<TypeCodeId>742800</TypeCodeId>
+<TypeCodeGroup>Currency</TypeCodeGroup>
+<TypeCode>VES</TypeCode>
+<Definition>Venezuelan Bolivar Soberano</Definition>
+</TypeCodeDetail>
+</TypeCodes>
