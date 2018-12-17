@@ -10,8 +10,9 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Suivi de vos fonds", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Edit funds", shares_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
+      <%= link_to "Suivi de vos fonds", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">

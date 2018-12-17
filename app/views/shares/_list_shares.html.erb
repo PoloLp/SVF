@@ -16,14 +16,12 @@
         <p> <%= link_to share.securityname, share_path(share), target:"_blank", class: "btn  btn-success"%></p>
         <p><%= "Nom du fonds : #{share.fundname}" %></p>
       </div>
-
       <%= render 'currency_check', share: share %>
-
     </div>
   <% end %>
 
-<%= select_tag :field, options_for_select([["All Fields", ""], ["investment_strategy", "investment_strategy"], ["current_strategy", "current_strategy"]]) %>
-
-<%= submit_tag "Edit strategy", class: "btn  btn-info" %>
+  <%= select_tag :field, options_for_select([["All Fields", ""], ["investment_strategy", "investment_strategy"], ["current_strategy", "current_strategy"]]) %>
+  <% if @shares.count > 0 %>
+    <%= submit_tag "Edit strategy", class: "btn  btn-info" %>
+  <% end %>
 <% end %>
-

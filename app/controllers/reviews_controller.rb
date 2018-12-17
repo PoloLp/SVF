@@ -19,7 +19,6 @@ class ReviewsController < ApplicationController
   end
 
   def new_multiple
-    # we need @share in our `simple_form_for`
     @shares = Share.find(params[:share_ids])
   end
 
@@ -27,7 +26,6 @@ class ReviewsController < ApplicationController
     # we need `share_id` to asssociate review with corresponding share
     @shares = Share.find(params[:share_ids])
     @shares.each do |share|
-      # review_field = {}
       review_field = review_params
       if review_field[:investment_strategy].nil?
         review_field[:investment_strategy] = share.reviews.last.investment_strategy
@@ -37,7 +35,6 @@ class ReviewsController < ApplicationController
       @review = Review.new(review_field)
       @review.share = share
       @review.save
-# byebug
     end
     redirect_to shares_path(@shares)
     flash[:notice] = "MAJ Stratégies effectuée"
