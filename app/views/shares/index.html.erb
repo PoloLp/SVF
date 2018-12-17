@@ -1,9 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
+  <h2>Search by isin or name</h2>
+  <div class="row">
+    <%= form_tag shares_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a fund by isin" %>
+    <% end %>
+  </div>
       <div id="Sharelist1">
         <%= render 'empty_result' unless !@shares.empty? %>
-        <%= "Code isin cherché : #{@isin_search}" %>
         <%= render 'list_shares' %>
       </div>
     </div>
