@@ -1,4 +1,4 @@
-<%= form_tag edit_individual_shares_path do %>
+<%= form_tag new_multiple_share_reviews_path [@share, @review] do %>
   <% @shares.each do |share| %>
 
     <div class="share-list-item">
@@ -21,20 +21,6 @@
       <%= render 'currency_check', share: share %>
     </div>
   <% end %>
-<% end %>
-
-
-<%= form_tag edit_individual_shares_path do %>
-  <% @shares.each do |share| %>
-  <div class="share-list-item">
-    <div class="share-list-item-name">
-        <%= check_box_tag "share_ids[]", share.id %>
-    </div>
-      <div class="share-list-item-body">
-        <p><strong> <%= share.securityname %> </strong></p>
-        <p><%= "Nom du fonds : #{share.fundname}" %></p>
-    </div>
-  </div>
-  <% end %>
 <%= submit_tag "Edit strategy", :class => "btn  btn-info" %>
 <% end %>
+

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10">
+      <%= form_tag create_multiple_share_reviews_path [@shares, @reviews], method: :put do %>
+        <ul>
+        <% @shares.each do |share| %>
+          <li>
+            <%= hidden_field_tag "share_ids[]", share.id %>
+            <div class="share-list-item-name">
+              <h3>
+                <%= render 'shares/currency_display', share: share %>
+                <%= " - #{share.isin}" %>
+              </h3>
+            </div>
+            <%= share.securityname %>
+            <div class="share-list-item-name">
+              <h3><%= "Performance id : #{share.performanceid}" %></h3>
+            </div>
+            <ul class="errors">
+              <% share.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </li>
+        <% end %>
+        </ul>
+
+        <%= fields_for :share do |f| %>
+          <div class="field">
+            <%= f.label :investment_strategy %><br />
+            <%= f.text_field :investment_strategy %>
+          </div>
+          <div class="field">
+            <%= f.label :current_strategy %><br />
+            <%= f.text_field :current_strategy %>
+          </div>
+        <% end %>
+         <div class="actions">
+          <%= submit_tag "Update" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
