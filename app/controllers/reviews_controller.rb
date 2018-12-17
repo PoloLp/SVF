@@ -21,15 +21,13 @@ class ReviewsController < ApplicationController
   def new_multiple
     # we need @share in our `simple_form_for`
     @shares = Share.find(params[:share_ids])
-
   end
 
   def create_multiple
     # we need `share_id` to asssociate review with corresponding share
     @shares = Share.find(params[:share_ids])
-    # byebug
     @shares.each do |share|
-      @review = Review.new(share_review_params)
+      @review = Review.new(review_params)
       @review.share = share
       @review.save
     end

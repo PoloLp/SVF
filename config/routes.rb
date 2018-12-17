@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     resources :reviews, only: [ :new, :create ] do
       collection do
         post 'new_multiple'
-        put 'create_multiple'
         post 'create_multiple'
       end
     end

@@ -1,45 +1,50 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-10">
-      <%= form_tag create_multiple_share_reviews_path [@shares, @reviews], method: :put do %>
+      <%= form_tag create_multiple_share_reviews_path [@shares, @reviews] do %>
+
         <ul>
-        <% @shares.each do |share| %>
-          <li>
-            <%= hidden_field_tag "share_ids[]", share.id %>
-            <div class="share-list-item-name">
-              <h3>
-                <%= render 'shares/currency_display', share: share %>
-                <%= " - #{share.isin}" %>
-              </h3>
-            </div>
-            <%= share.securityname %>
-            <div class="share-list-item-name">
-              <h3><%= "Performance id : #{share.performanceid}" %></h3>
-            </div>
-            <ul class="errors">
-              <% share.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
-            </ul>
-          </li>
-        <% end %>
+          <% @shares.each do |share| %>
+            <li>
+
+              <%= hidden_field_tag "share_ids[]", share.id %>
+
+              <div class="share-list-item-name">
+                <h3>
+                  <%= render 'shares/currency_display', share: share %>
+                  <%= " - #{share.isin} | Share name : #{share.securityname}" %>
+                </h3>
+              </div>
+
+              <ul class="errors">
+                <% share.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+
+              <div class="share-list-item-name">
+                <%= render 'reviews/last_review', share: share %>
+              </div>
+            </li>
+          <% end %>
         </ul>
 
-        <%= fields_for :share do |f| %>
+        <%= fields_for :review do |f| %>
           <div class="field">
             <%= f.label :investment_strategy %><br />
-            <%= f.text_field :investment_strategy %>
+            <%= f.text_field :investment_strategy, placeholder: "Commentaire de structure" %>
           </div>
           <div class="field">
             <%= f.label :current_strategy %><br />
-            <%= f.text_field :current_strategy %>
+            <%= f.text_field :current_strategy, placeholder: "Commentaire de stratégie"
+ %>
           </div>
         <% end %>
-         <div class="actions">
-          <%= submit_tag "Update" %>
+        <div class="actions">
+          <%= submit_tag "Edit selected fields", class: "btn btn-primary" %>
         </div>
       <% end %>
+
     </div>
   </div>
 </div>
-

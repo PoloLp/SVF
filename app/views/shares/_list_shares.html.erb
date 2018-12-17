@@ -2,7 +2,6 @@
   <% @shares.each do |share| %>
 
     <div class="share-list-item">
-      <!-- <#%= link_to "MAJ", new_share_review_path(share), class: "btn  btn-success"%> -->
       <%= check_box_tag "share_ids[]", share.id %>
 
       <div class="share-list-item-name">
@@ -13,12 +12,13 @@
         <p><%= "Currency S isin : #{share.currencyspecificisin}" %></p>
       </div>
 
-      <div class="share-list-item-body">
-        <p><strong> <%= share.securityname %> </strong></p>
+      <div class="share-list-item-body" >
+        <p> <%= link_to share.securityname, share_path(share), target:"_blank", class: "btn  btn-success"%></p>
         <p><%= "Nom du fonds : #{share.fundname}" %></p>
       </div>
 
       <%= render 'currency_check', share: share %>
+
     </div>
   <% end %>
 <%= submit_tag "Edit strategy", :class => "btn  btn-info" %>
