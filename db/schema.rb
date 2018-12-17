@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_10_171555) do
+ActiveRecord::Schema.define(version: 2018_12_17_165137) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,18 @@ ActiveRecord::Schema.define(version: 2018_12_10_171555) do
     t.string "typecode"
     t.string "definitionfrench"
     t.string "definition"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "currencies", force: :cascade do |t|
+    t.bigint "typecodeid"
+    t.string "typecodegroup"
+    t.string "typecode"
+    t.string "definition"
+    t.string "definition_french"
+    t.string "definition_spanish"
+    t.string "definition_chinese"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
