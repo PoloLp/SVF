@@ -21,6 +21,9 @@
 
     </div>
   <% end %>
-<%= submit_tag "Edit strategy", :class => "btn  btn-info" %>
+
+<%= select_tag :field, options_for_select([["All Fields", ""], ["investment_strategy", "investment_strategy"], ["current_strategy", "current_strategy"]]) %>
+
+<%= submit_tag "Edit strategy", class: "btn  btn-info" %>
 <% end %>
 

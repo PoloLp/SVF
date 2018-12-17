@@ -1,8 +1,28 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-10">
+      <h1>Edit strategy for multiples records</h1>
       <%= form_tag create_multiple_share_reviews_path [@shares, @reviews] do %>
 
+        <%= fields_for :review do |f| %>
+          <% if params[:field].blank? || params[:field] == "investment_strategy" %>
+            <div class="field">
+              <%= f.label :investment_strategy %><br />
+              <%= f.text_field :investment_strategy, placeholder: "Commentaire de structure" %>
+            </div>
+          <% end %>
+          <% if params[:field].blank? || params[:field] == "current_strategy" %>
+            <div class="field">
+              <%= f.label :current_strategy %><br />
+              <%= f.text_field :current_strategy, placeholder: "Commentaire de stratégie"%>
+          <% end %>
+          </div>
+        <% end %>
+        <div class="actions">
+          <%= submit_tag "Edit selected fields", class: "btn btn-primary" %>
+        </div>
+
+        <h3>Latest strategy reviews :</h3>
         <ul>
           <% @shares.each do |share| %>
             <li>
@@ -28,23 +48,7 @@
             </li>
           <% end %>
         </ul>
-
-        <%= fields_for :review do |f| %>
-          <div class="field">
-            <%= f.label :investment_strategy %><br />
-            <%= f.text_field :investment_strategy, placeholder: "Commentaire de structure" %>
-          </div>
-          <div class="field">
-            <%= f.label :current_strategy %><br />
-            <%= f.text_field :current_strategy, placeholder: "Commentaire de stratégie"
- %>
-          </div>
-        <% end %>
-        <div class="actions">
-          <%= submit_tag "Edit selected fields", class: "btn btn-primary" %>
-        </div>
       <% end %>
-
     </div>
   </div>
 </div>
