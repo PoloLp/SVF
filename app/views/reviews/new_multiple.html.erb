@@ -25,31 +25,11 @@
         </div>
 
         <h3>Latest strategy reviews :</h3>
-        <ul>
-          <% @shares.each do |share| %>
-            <li>
 
-              <%= hidden_field_tag "share_ids[]", share.id %>
-
-              <div class="share-list-item-name">
-                <h3>
-                  <%= render 'shares/currency_display', share: share %>
-                  <%= " - #{share.isin} | Share name : #{share.securityname}" %>
-                </h3>
-              </div>
-
-              <ul class="errors">
-                <% share.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-                <% end %>
-              </ul>
-
-              <div class="share-list-item-name">
-                <%= render 'reviews/last_review', share: share %>
-              </div>
-            </li>
-          <% end %>
-        </ul>
+        <% @shares.each do |share| %>
+        <%= hidden_field_tag "share_ids[]", share.id %>
+          <%= render 'list_latest_reviews', share: share unless share.reviews.empty? %>
+        <% end %>
       <% end %>
     </div>
   </div>

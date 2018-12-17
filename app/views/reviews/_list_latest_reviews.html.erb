@@ -1,0 +1,21 @@
+<ul>
+    <li>
+
+      <div class="share-list-item-name">
+        <h3>
+          <%= render 'shares/currency_display', share: share %>
+          <%= " - #{share.isin} | Share name : #{share.securityname}" %>
+        </h3>
+      </div>
+
+      <ul class="errors">
+        <% share.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+
+      <div class="share-list-item-name">
+        <%= render 'reviews/last_review', share: share %>
+      </div>
+    </li>
+</ul>
