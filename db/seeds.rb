@@ -112,6 +112,7 @@ puts "#{Category.count} categories created in #{delta} minutes"
 # *****************************************************************
 # IMPORT CURRENCIES
 # à faire avec le chemin http !!! -----------------------------
+# http://edw.morningstar.com/GetDictionaryXML.aspx?ClientId=EOS&DicType=TYPECODE&Id=Currency&Search=
 # *****************************************************************
 valid_currencies = []
 

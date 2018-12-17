@@ -8,6 +8,10 @@
         params[:query],
         class: "form-control",
         placeholder: "Find a fund by isin" %>
+
+      <%= select_tag :currency_query, options_for_select([["Euro", "EUR"], ["US Dollar", "USD"]]), include_blank: true %>
+
+<!--       <#%= select_tag :currency_query, params[:currency_query], options_for_select([["All Currencies", ""], ["Euro", "EUR"], ["US Dollar", "USD"]]) %> -->
     <% end %>
   </div>
       <div id="Sharelist1">
