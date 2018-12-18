@@ -20,10 +20,13 @@
     </div>
   <% end %>
 
+  <% if @shares.count > 0  %>
   <div class="col-sm-4 col-sm-offset-8 form-inline">
     <%= select_tag :field, options_for_select([["All Fields", ""], ["investment_strategy", "investment_strategy"], ["current_strategy", "current_strategy"]]), class:"form-control" %>
     <% if @shares.count > 0 %>
       <%= submit_tag "Edit strategy", class: "btn  btn-info" %>
     <% end %>
   </div>
+  <% end %>
+
 <% end %>
