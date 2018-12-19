@@ -13,6 +13,7 @@ Currency.destroy_all
 puts 'Create shares'
 p '*' *30
 
+
 # Timer ---------------------------------------------
 t1 = Time.now
 
