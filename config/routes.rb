@@ -9,7 +9,8 @@ Rails.application.routes.draw do
       end
     end
   end
-  resources :companies, only: [:index, :new, :create]
-
+  resources :companies, only: [:index, :new, :create] do
+    resources :share_catalogs, only: [:index, :new, :create]
+  end
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
