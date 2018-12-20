@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Create a company</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <%= simple_form_for @company do |f| %>
+          <%= f.input :name, allow_blank: false, placeholder: "Company's name" %>
+          <%= f.submit "Save the company", class: "btn btn-warning" %>
+
+        <% end %>
+      </div>
+    </div>
+
+
+  </div>
