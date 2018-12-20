@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h4><%= @shares.count %> Fund reviews for : <%= @company.name %></h4>
+      </div>
+      <div class="col-sm-4">
+        <p><%= link_to "Add a fund to list", "#", class: "btn btn-warning"%></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <% @shares.each do |share|%>
+            <div class="col-sm-6">
+              <%= link_to "id: #{share.id} | #{share.securityname}", share_path(share), target:"_blank", class: "btn btn-success"%>
+            </div>
+            <div class="col-sm-4">
+              <p><%= link_to "Delete", "#", class: "btn btn-danger"%></p>
+            </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

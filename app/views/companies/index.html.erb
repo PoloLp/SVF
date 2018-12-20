@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Companies list : </h1>
+      </div>
+      <div class="col-sm-4">
+        <h1><%= link_to "Create new company", new_company_path, class: "btn btn-warning"%></h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+          <% @companies.each do |company|%>
+              <div class="col-sm-6">
+                <p><%= "id: #{company.id} | Nom : #{company.name}" %></p>
+              </div>
+              <div class="col-sm-4">
+                <p><%= link_to "Display share list", company_share_catalogs_path(company), class: "btn btn-primary"%></p>
+              </div>
+
+          <% end %>
+
+      </div>
+    </div>
+
+  </div>
+</div>
