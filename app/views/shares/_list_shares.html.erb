@@ -1,33 +1,37 @@
-<%= form_tag new_multiple_share_reviews_path [@share, @review] do %>
-  <% @shares.each do |share| %>
+<div class="row">
+  <%= form_tag new_multiple_share_reviews_path [@share, @review] do %>
+    <% @shares.each do |share| %>
 
-    <div class="share-list-item" >
-      <%= check_box_tag "share_ids[]", share.id %>
+      <div class="share-list-item" >
+        <%= check_box_tag "share_ids[]", share.id %>
 
-      <div class="share-list-item-name col-sm-5">
-        <h3>
-          <%= render 'currency_display', share: share %>
-          <%= " - #{share.isin}" %>
-        </h3>
-        <p><%= "Currency S isin : #{share.currencyspecificisin}" %></p>
+        <div class="share-list-item-name col-sm-4">
+          <h3>
+            <%= render 'currency_display', share: share %>
+            <%= " - #{share.isin}" %>
+          </h3>
+          <p><%= "Currency S isin : #{share.currencyspecificisin}" %></p>
+        </div>
+
+        <div class="share-list-item-body col-sm-5" >
+          <p> <%= link_to share.securityname, share_path(share), target:"_blank", class: "btn btn-success btn-sm"%></p>
+          <p><%= "Nom du fonds : #{share.fundname}" %></p>
+        </div>
+        <div class="col-sm-3">
+          <%= render 'currency_check', share: share %>
+        </div>
+      </div>
+    <% end %>
+
+    <% if @shares.count > 0  %>
+
+      <div class="col-sm-6 col-sm-offset-6 form-inline">
+        <%= select_tag :field, options_for_select([["All Fields", ""], ["investment_strategy", "investment_strategy"], ["current_strategy", "current_strategy"]]), class:"form-control" %>
+        <% if @shares.count > 0 %>
+          <%= submit_tag "Edit strategy", class: "btn btn-info" %>
+        <% end %>
       </div>
 
-      <div class="share-list-item-body col-sm-5" >
-        <p> <%= link_to share.securityname, share_path(share), target:"_blank", class: "btn btn-success btn-sm"%></p>
-        <p><%= "Nom du fonds : #{share.fundname}" %></p>
-      </div>
-      <%= render 'currency_check', share: share %>
-    </div>
+    <% end %>
   <% end %>
-
-  <% if @shares.count > 0  %>
-
-    <div class="col-sm-6 col-sm-offset-6 form-inline">
-      <%= select_tag :field, options_for_select([["All Fields", ""], ["investment_strategy", "investment_strategy"], ["current_strategy", "current_strategy"]]), class:"form-control" %>
-      <% if @shares.count > 0 %>
-        <%= submit_tag "Edit strategy", class: "btn btn-info" %>
-      <% end %>
-    </div>
-
-  <% end %>
-<% end %>
+</div>
