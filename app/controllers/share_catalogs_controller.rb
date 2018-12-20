@@ -1,0 +1,2 @@
+class ShareCatalogsController < ApplicationController
+end

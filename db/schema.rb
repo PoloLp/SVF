@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_19_172916) do
+ActiveRecord::Schema.define(version: 2018_12_20_085529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,15 @@ ActiveRecord::Schema.define(version: 2018_12_19_172916) do
     t.index ["share_id"], name: "index_reviews_on_share_id"
   end
 
+  create_table "share_catalogs", force: :cascade do |t|
+    t.bigint "share_id"
+    t.bigint "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_share_catalogs_on_company_id"
+    t.index ["share_id"], name: "index_share_catalogs_on_share_id"
+  end
+
   create_table "shares", force: :cascade do |t|
     t.string "isin"
     t.string "secid"
@@ -90,4 +99,6 @@ ActiveRecord::Schema.define(version: 2018_12_19_172916) do
   end
 
   add_foreign_key "reviews", "shares"
+  add_foreign_key "share_catalogs", "companies"
+  add_foreign_key "share_catalogs", "shares"
 end
