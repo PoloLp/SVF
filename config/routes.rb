@@ -10,7 +10,11 @@ Rails.application.routes.draw do
     end
   end
   resources :companies, only: [:index, :new, :create] do
-    resources :share_catalogs, only: [:index, :new, :create]
+    resources :share_catalogs, only: [:index, :new, :create] do
+      collection do
+        post :selected
+      end
+    end
   end
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

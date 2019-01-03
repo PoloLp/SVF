@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <%= "Select funds to add to #{@company.name}'s list" %>
+  </div>
+
+  <div class="row">
+    <%= form_tag new_company_share_catalog_path, method: :get, class:"form-group form-inline" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a fund by isin or name" %>
+        <%= select_tag :currency_query, options_for_select([["Euro", "EUR"],
+                                                            ["US Dollar", "USD"],
+                                                            ["GBP", "GBP"]]),
+                                        include_blank: true,
+                                        class:"form-control" %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
