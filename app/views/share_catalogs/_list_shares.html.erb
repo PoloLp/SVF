@@ -1,0 +1,22 @@
+<% @shares.each do |share| %>
+
+  <div class="share-list-item" >
+    <%= check_box_tag "share_ids[]", share.id %>
+
+    <div class="share-list-item-name col-sm-4">
+      <h3>
+        <%= render 'shares/currency_display', share: share %>
+        <%= " - #{share.isin}" %>
+      </h3>
+      <p><%= "Currency S isin : #{share.currencyspecificisin}" %></p>
+    </div>
+
+    <div class="share-list-item-body col-sm-5" >
+      <p> <%= link_to share.securityname, share_path(share), target:"_blank", class: "btn btn-success btn-sm"%></p>
+      <p><%= "Nom du fonds : #{share.fundname}" %></p>
+    </div>
+    <div class="col-sm-3">
+      <%= render 'shares/currency_check', share: share %>
+    </div>
+  </div>
+<% end %>
