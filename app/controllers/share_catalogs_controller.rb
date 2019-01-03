@@ -32,6 +32,8 @@ class ShareCatalogsController < ApplicationController
       @share_catalog = ShareCatalog.new
       @share_catalog.company = @company
       @share_catalog.share = share
+      @share_catalog.status = true
+
       @share_catalog.save
     end
     redirect_to company_share_catalogs_path(@company)
