@@ -17,7 +17,6 @@ class ShareCatalogsController < ApplicationController
     else
       @shares = []
     end
-
   end
 
   def new
@@ -25,7 +24,18 @@ class ShareCatalogsController < ApplicationController
     @share_catalog = ShareCatalog.new
   end
 
-  def create
+  def selected
+    @company = Company.find(params[:company_id])
+    @shares = Share.find(params[:share_ids])
+
+    @shares.each do |share|
+      @share_catalog = ShareCatalog.new
+      @share_catalog.company = @company
+      @share_catalog.share = share
+      @share_catalog.save
+    end
+    redirect_to company_share_catalogs_path(@company)
+    flash[:notice] = "#{@shares.count} funds added to the list"
   end
 
   private
