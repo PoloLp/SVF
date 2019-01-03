@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
   end
   resources :companies, only: [:index, :new, :create] do
-    resources :share_catalogs, only: [:index, :new, :create] do
+    resources :share_catalogs, only: [:index, :new, :create, :update] do
       collection do
         post :selected
       end

@@ -16,7 +16,7 @@
               <%= link_to "id: #{share_catalog.id} | #{share_catalog.securityname}", share_path(share_catalog), class: "btn btn-success"%>
             </div>
             <div class="col-sm-4">
-              <p><%= link_to "Delete", "#", class: "btn btn-danger"%></p>
+              <p><%= link_to "Delete", company_share_catalog_path(@company, share_catalog, @share_catalog), method: :patch ,class: "btn btn-danger"%></p>
             </div>
         <% end %>
       </div>
