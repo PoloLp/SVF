@@ -24,6 +24,12 @@ class ShareCatalogsController < ApplicationController
     @share_catalog = ShareCatalog.new
   end
 
+  def update
+    byebug
+    @share_catalog = ShareCatalog.find(params[:id])
+    @share_catalog.update(params[:share_catalog])
+  end
+
   def selected
     @company = Company.find(params[:company_id])
     @shares = Share.find(params[:share_ids])
@@ -33,12 +39,12 @@ class ShareCatalogsController < ApplicationController
       @share_catalog.company = @company
       @share_catalog.share = share
       @share_catalog.status = true
-
       @share_catalog.save
     end
     redirect_to company_share_catalogs_path(@company)
     flash[:notice] = "#{@shares.count} funds added to the list"
   end
+
 
   private
 
