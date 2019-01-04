@@ -1,26 +1,23 @@
 <div class="container">
     <div class="row">
         <h4><%= @share_catalog_list.count %> Fund reviews for : <%= @company.name %></h4>
-<!--
-      <div class="col-sm-8">
-      </div>
-      <div class="col-sm-4">
-        <p><#%= link_to "Add a fund to list", new_company_share_catalog_path(@company), class: "btn btn-warning"%></p>
-      </div> -->
     </div>
 
     <div class="row">
       <div class="col-sm-12">
-        <% @share_catalog_list.each do |share_catalog|%>
+        <% @share_catalog.each do |share_catalog|%>
+          <%= simple_form_for [@company, share_catalog] do |f| %>
             <div class="col-sm-6">
-              <%= link_to "id: #{share_catalog.id} | #{share_catalog.securityname}", share_path(share_catalog), class: "btn btn-success"%>
+              <%= "#{share_catalog.id} | #{share_catalog.status} | #{share_catalog.share.securityname}" %>
             </div>
             <div class="col-sm-4">
-              <p><%= link_to "Delete", company_share_catalog_path(@company, share_catalog, @share_catalog), method: :patch ,class: "btn btn-danger"%></p>
+              <%= f.submit "Remove from list", class: "btn btn-danger" %>
             </div>
+          <% end %>
         <% end %>
       </div>
     </div>
+
     <div class="row">
       <h4><%= "Add funds to #{@company.name}'s list" %></h4>
       <%= form_tag company_share_catalogs_path, method: :get, class:"form-group form-inline" do %>
@@ -37,7 +34,7 @@
       <% end %>
     </div>
     <div class="row">
-        <p><%= "Nombre de shares : #{@shares.count}" %></p>
+        <p><%= "Results : #{@shares.count}" %></p>
         <%= render 'list_shares' %>
     </div>
   </div>
