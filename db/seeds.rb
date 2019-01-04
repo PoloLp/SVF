@@ -5,7 +5,7 @@ require 'csv'
 require 'activerecord-import'
 require 'open-uri'
 require 'nokogiri'
-require 'pry-byebug'
+
 
 Category.destroy_all
 Currency.destroy_all
