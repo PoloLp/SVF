@@ -1,7 +1,7 @@
 class ShareCatalogsController < ApplicationController
   def index
     @company = Company.find(params[:company_id])
-    @share_catalog = ShareCatalog.where(company_id: params[:company_id])
+    @share_catalog = ShareCatalog.where(company_id: params[:company_id], status: true)
     @share_catalog_list = Share.where(id: share_ids_array(@share_catalog))
 
     if params[:query].present?
@@ -25,9 +25,12 @@ class ShareCatalogsController < ApplicationController
   end
 
   def update
-    byebug
+    @company = Company.find(params[:company_id])
     @share_catalog = ShareCatalog.find(params[:id])
-    @share_catalog.update(params[:share_catalog])
+    @share_catalog.status = false
+    @share_catalog.save!
+
+    redirect_to company_share_catalogs_path(@company)
   end
 
   def selected
