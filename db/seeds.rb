@@ -21,7 +21,7 @@ i= 0
 
 valid_shares = []
 
-filepath = 'db/MASTER.csv'
+filepath = 'db/MASTER fr.csv'
 csv_options = { col_sep: ';', quote_char: '"', force_quotes: true,
                 headers: :first_row, header_converters: :symbol }
 
