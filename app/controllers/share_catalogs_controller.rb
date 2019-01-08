@@ -17,6 +17,8 @@ class ShareCatalogsController < ApplicationController
     else
       @shares = []
     end
+
+    @user = current_user
   end
 
   def new
@@ -47,7 +49,6 @@ class ShareCatalogsController < ApplicationController
     redirect_to company_share_catalogs_path(@company)
     flash[:notice] = "#{@shares.count} funds added to the list"
   end
-
 
   private
 

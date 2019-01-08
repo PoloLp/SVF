@@ -4,15 +4,20 @@
     <%= image_tag "http://eos-allocations.fr/images/headers/logo_fd_blanc-1.png", height: 50 %>
   <% end %>
 
+
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <% if user_signed_in? %>
+      <!-- When logged in -->
 
-      <!-- Links when logged in -->
-      <%= link_to "Edit funds", shares_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <p class="navbar-wagon-item "><%= "Société: #{Company.find(UserCompany.where(user_id:current_user.id).first.company_id).name}" %></p>
+      <% if current_user.admin %>
+        <%= link_to "Edit funds", shares_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% end %>
 
-      <%= link_to "Suivi de vos fonds", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+
+      <%= link_to "Suivi de vos fonds", company_share_catalogs_path(UserCompany.where(user_id:current_user.id).first.company_id), class: "navbar-wagon-item navbar-wagon-link" %>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
@@ -54,4 +59,3 @@
     </div>
   </div>
 </div>
-
