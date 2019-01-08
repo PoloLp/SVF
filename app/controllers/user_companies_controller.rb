@@ -3,8 +3,10 @@ class UserCompaniesController < ApplicationController
     @user = current_user
     @companies = Company.all
     @share_catalog = ShareCatalog.where(company_id: @companies.ids, status: true)
-    @share_catalog = @share_catalog.order('updated_at DESC')
     @share_catalog_list = Share.where(id: share_ids_array(@share_catalog))
+    @reviews = Review.where(share_id: @share_catalog_list.ids).order("updated_at DESC")
+
+# byebug
   end
 
   private
