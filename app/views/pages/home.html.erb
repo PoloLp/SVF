@@ -1,5 +1,13 @@
 <div class="container">
+
   <% if user_signed_in? && current_user.admin%>
-    <p><%= link_to "Access Companies list", companies_path, class: "btn  btn-success"%></p>
+
+    <div class="row">
+      <p><%= link_to "Access Companies list", companies_path, class: "btn  btn-success"%></p>
+
+      <p><%= link_to "Display all fund in companies lists", user_companies_path, class: "btn  btn-success"%></p>
+    </div>
+
   <% end %>
+
 </div>

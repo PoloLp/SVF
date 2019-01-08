@@ -11,15 +11,13 @@
     <div class="row">
       <div class="col-sm-12">
           <% @companies.each do |company|%>
-              <div class="col-sm-6">
-                <p><%= "id: #{company.id} | Nom : #{company.name}" %></p>
-              </div>
-              <div class="col-sm-4">
-                <p><%= link_to "Display share list", company_share_catalogs_path(company), class: "btn btn-primary"%></p>
-              </div>
-
+            <div class="col-sm-6">
+              <p><%= "id: #{company.id} | Nom : #{company.name}" %></p>
+            </div>
+            <div class="col-sm-4">
+              <p><%= link_to "Display share list", company_share_catalogs_path(company), class: "btn btn-primary"%></p>
+            </div>
           <% end %>
-
       </div>
     </div>
 

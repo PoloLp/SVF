@@ -9,6 +9,9 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :user_companies, only: [:index]
+
   resources :companies, only: [:index, :new, :create] do
     resources :share_catalogs, only: [:index, :new, :create, :update] do
       collection do
