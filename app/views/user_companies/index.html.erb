@@ -9,12 +9,13 @@
         <% @share_catalog.each do |share_catalog|%>
 
           <div class="col-sm-8">
-            <p><%= "#{share_catalog.id} | #{share_catalog.share.securityname} --" %></p>
+            <p><%= "#{share_catalog.id} | #{share_catalog.share.securityname}" %></p>
           </div>
 
           <div class="col-sm-4">
             <% if !share_catalog.share.reviews.last.nil? %>
               <%= "last updated at : #{share_catalog.share.reviews.last.created_at.strftime('%m/%d/%Y')}" %>
+
             <% else %>
               <%= "no review" %>
             <% end %>
