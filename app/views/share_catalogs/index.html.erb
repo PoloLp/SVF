@@ -1,4 +1,8 @@
 <div class="container">
+<p>
+  <%= "#{@user.id} | #{@user.first_name} #{@user.last_name} | admin: #{@user.admin}"%>
+</p>
+
     <div class="row">
         <h4><%= @share_catalog_list.count %> Fund reviews for : <%= @company.name %></h4>
     </div>
@@ -15,14 +19,17 @@
                 <%= "no review" %>
               <% end %>
             </div>
-            <div class="col-sm-4">
-              <%= f.submit "Remove from list", class: "btn btn-danger" %>
-            </div>
+            <% if @user.admin %>
+              <div class="col-sm-4">
+                <%= f.submit "Remove from list", class: "btn btn-danger" %>
+              </div>
+            <% end %>
           <% end %>
         <% end %>
       </div>
     </div>
 
+  <% if @user.admin %>
     <div class="row">
       <h4><%= "Add funds to #{@company.name}'s list" %></h4>
       <%= form_tag company_share_catalogs_path, method: :get, class:"form-group form-inline" do %>
@@ -38,9 +45,11 @@
           <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
     </div>
+
     <div class="row">
         <p><%= "Results : #{@shares.count}" %></p>
         <%= render 'list_shares' %>
     </div>
+  <% end %>
   </div>
 </div>

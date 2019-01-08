@@ -1,5 +1,5 @@
 <div class="container">
-  <p><%= link_to "Access Companies list", companies_path, class: "btn  btn-success"%>
-  </p>
-
+  <% if user_signed_in? && current_user.admin%>
+    <p><%= link_to "Access Companies list", companies_path, class: "btn  btn-success"%></p>
+  <% end %>
 </div>
