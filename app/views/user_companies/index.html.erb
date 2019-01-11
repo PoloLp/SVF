@@ -6,20 +6,20 @@
 
     <div class="row">
       <div class="col-sm-12">
-        <% @share_catalog.each do |share_catalog|%>
+
+        <% @share_catalog_list.each do |share| %>
 
           <div class="col-sm-8">
-            <p><%= "#{share_catalog.id} | #{share_catalog.share.securityname}" %></p>
+          <p><%= "#{share.securityname} | isin : #{share.isin} " %></p>
           </div>
 
           <div class="col-sm-4">
-            <% if !share_catalog.share.reviews.last.nil? %>
-              <%= "last updated at : #{share_catalog.share.reviews.last.created_at.strftime('%m/%d/%Y')}" %>
-
+            <% if !share.reviews.last.nil? %>
+              <%= "last updated at : #{share.reviews.last.created_at.strftime('%d/%m/%Y')}" %>
             <% else %>
               <%= "no review" %>
             <% end %>
-          </div>
+           </div>
 
         <% end %>
       </div>

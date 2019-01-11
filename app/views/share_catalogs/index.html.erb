@@ -14,7 +14,7 @@
             <div class="col-sm-8">
               <%= "#{share_catalog.id} | #{share_catalog.share.securityname} --" %>
               <% if !share_catalog.share.reviews.last.nil? %>
-                <%= "last updated at : #{share_catalog.share.reviews.last.created_at.strftime('%m/%d/%Y')}" %>
+                <%= "last updated at : #{share_catalog.share.reviews.last.created_at.strftime('%d/%m/%Y')}" %>
               <% else %>
                 <%= "no review" %>
               <% end %>
