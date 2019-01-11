@@ -26,12 +26,4 @@ class UserCompaniesController < ApplicationController
     end
     return sia
   end
-
-  def order_share_catalog(list)
-    list.each do |share|
-      # p share.reviews.last.nil?
-    end
-
-    # list.order(share.reviews.last).desc
-  end
 end
