@@ -35,7 +35,7 @@
     <% if @shares.count > 0  %>
 
       <div class="col-sm-6 col-sm-offset-6 form-inline">
-        <%= select_tag :field, options_for_select([["All Fields", ""], ["investment_strategy", "investment_strategy"], ["current_strategy", "current_strategy"]]), class:"form-control" %>
+        <%= select_tag :field, options_for_select([["All Fields", ""], ["investment_strategy", "investment_strategy"], ["current_strategy", "current_strategy"], ["preconisation", "preconisation_id"]]), class:"form-control" %>
         <% if @shares.count > 0 %>
           <%= submit_tag "Edit strategy", class: "btn btn-info" %>
         <% end %>

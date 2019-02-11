@@ -19,6 +19,8 @@ p '*' *30
 # Timer ---------------------------------------------
 t1 = Time.now
 
+User.create(email:"polo@gmail.com", password:"123456", password_confirmation:"123456")
+
 i= 0
 
 valid_shares = []
@@ -137,3 +139,13 @@ document.root.children.each do |currency|
 end
 
 Currency.import valid_currencies
+
+
+p '*' *30
+p 'Create preconisations entries'
+
+Preconisation.create(name:'Vendre', value:0)
+Preconisation.create(name:'Alléger', value:1)
+Preconisation.create(name:'Neutre', value:2)
+Preconisation.create(name:'Conserver', value:3)
+Preconisation.create(name:'Acheter', value:4)

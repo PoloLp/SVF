@@ -31,6 +31,8 @@ class ReviewsController < ApplicationController
         review_field[:investment_strategy] = share.reviews.last.investment_strategy
       elsif review_field[:current_strategy].nil?
         review_field[:current_strategy] = share.reviews.last.current_strategy
+      elsif review_field[:preconisation_id].nil?
+        review_field[:preconisation_id] = share.reviews.last.preconisation_id
       end
       @review = Review.new(review_field)
       @review.share = share
@@ -43,6 +45,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:investment_strategy, :current_strategy)
+    params.require(:review).permit(:investment_strategy, :current_strategy, :preconisation_id)
   end
 end

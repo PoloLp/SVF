@@ -4,6 +4,8 @@
       <%= simple_form_for [@share, @review] do |f| %>
         <%= f.input :investment_strategy %>
         <%= f.input :current_strategy %>
+        <%= f.label :preconisation_id %><br />
+        <%= f.select :preconisation_id, options_for_select([['Aucune',""],['Vendre',0],['Alléger',1],['Neutre',2],['Conserver',3],['Acheter',4]]), class:"form-control" %>
         <%= f.submit "save the review", class: "btn btn-primary" %>
       <% end %>
     </div>

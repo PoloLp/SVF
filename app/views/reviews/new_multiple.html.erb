@@ -18,6 +18,12 @@
               <%= f.text_field :current_strategy, placeholder: "Commentaire de stratégie",
         class: "form-control"%>
           <% end %>
+          <!-- <#% pry-byebug  %> -->
+          <% if params[:field].blank? || params[:field] == "preconisation_id" %>
+            <div class="field">
+              <%= f.label :preconisation_id %><br />
+              <%= f.select :preconisation_id, options_for_select([['Aucune',""],['Vendre',0],['Alléger',1],['Neutre',2],['Conserver',3],['Acheter',4]]), class:"form-control" %>
+          <% end %>
           </div>
         <% end %>
         <div class="actions">
