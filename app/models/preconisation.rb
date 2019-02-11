@@ -1,0 +1,2 @@
+class Preconisation < ApplicationRecord
+end
