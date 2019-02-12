@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1>Edit strategy for multiples records</h1>
+      <h2>Edit strategy for multiples records</h2>
       <%= form_tag create_multiple_share_reviews_path [@shares, @reviews] do %>
 
         <%= fields_for :review do |f| %>
@@ -30,7 +30,7 @@
           <%= submit_tag "Edit selected fields", class: "btn btn-primary" %>
         </div>
 
-        <h3>Latest strategy reviews :</h3>
+        <h2>Latest strategy reviews :</h2>
 
         <% @shares.each do |share| %>
         <%= hidden_field_tag "share_ids[]", share.id %>

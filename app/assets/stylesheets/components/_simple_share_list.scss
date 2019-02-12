@@ -1,0 +1,45 @@
+.simple-list-row {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
+}
+
+.simple-list {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(67,69,55,0.3);
+}
+
+.simple-list-security {
+  flex-grow: 1;
+}
+.simple-list-date {
+  padding-left: 10px;
+  min-width: 100px;
+}
+.simple-list-date h6 {
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+.simple-list-date p {
+  font-size: 13px;
+  font-weight: lighter;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+.simple-list-security {
+  padding-left: 10px;
+  font-size: 18px;
+  color: rgba(0,0,0,0.7);
+}
+
+.simple-list-security strong{
+  color: rgba(67,69,55,0.8);
+}
+.simple-list-security p {
+  margin: 20px 0;
+}
+.simple-list-buttons {
+  font-size: 14px;
+  font-weight: bold;
+}
+

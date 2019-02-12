@@ -1,0 +1,70 @@
+.btn-search {
+  display: flex;
+  background-color: #202C59;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: lighter;
+  opacity: 0.5;
+}
+.btn-search:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.btn-remove {
+  display: flex;
+  color: #FF593B;
+  border: 1px solid #FF593B;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: lighter;
+  opacity: 0.5;
+}
+.btn-remove:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.btn-create {
+  display: flex;
+  background-color: #D95D39;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: lighter;
+  opacity: 0.5;
+}
+.btn-create:hover {
+  opacity: 1;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-display {
+  display: flex;
+  color: #04A366;
+  border: 1px solid #04A366;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-weight: lighter;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.btn-display:hover {
+  opacity: 1;
+  color: white;
+  background-color: #04A366;
+  text-decoration: none;
+}
+
+.home-button {
+  font-weight: normal;
+}
+
+.normal-font-button {
+  font-weight: normal;
+}

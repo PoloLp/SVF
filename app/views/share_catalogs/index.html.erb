@@ -1,37 +1,52 @@
 <div class="container">
-<p>
-  <%= "#{@user.id} | #{@user.first_name} #{@user.last_name} | admin: #{@user.admin}"%>
-</p>
 
-    <div class="row">
-        <h4><%= @share_catalog_list.count %> Fund reviews for : <%= @company.name %></h4>
-    </div>
+  <h2><%= @share_catalog_list.count %> Fund reviews for : <%= @company.name %></h2>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <% @share_catalog.each do |share_catalog|%>
-          <%= simple_form_for [@company, share_catalog] do |f| %>
-            <div class="col-sm-8">
-              <%= "#{share_catalog.id} | #{share_catalog.share.securityname} --" %>
-              <% if !share_catalog.share.reviews.last.nil? %>
-                <%= "last updated at : #{share_catalog.share.reviews.last.created_at.strftime('%d/%m/%Y')}" %>
-              <% else %>
-                <%= "no review" %>
-              <% end %>
-            </div>
-            <% if @user.admin %>
-              <div class="col-sm-4">
-                <%= f.submit "Remove from list", class: "btn btn-danger" %>
-              </div>
+<!--   <div class="row">
+    <p>
+      <#% if @user.admin %>
+        <#%= "#{@user.id} | #{@user.first_name} #{@user.last_name} | admin: #{@user.admin}"%>
+      <#% end %>
+    </p>
+  </div> -->
+<div class="row simple-list-row rounded"> <!-- style="box-shadow: 0 3px 20px rgba(0, 0, 0, .1)"> -->
+
+
+  <% @share_catalog.each do |share_catalog|%>
+    <%= simple_form_for [@company, share_catalog] do |f| %>
+      <div class="simple-list">
+
+        <div class="simple-list-date">
+          <h6>Date</h6>
+          <p>
+            <% if !share_catalog.share.reviews.last.nil? %>
+              <%= "#{share_catalog.share.reviews.last.created_at.strftime('%d/%m/%Y')}" %>
+            <% else %>
+              <%= "no review" %>
             <% end %>
+          </p>
+        </div>
+        <div class="simple-list-security">
+          <p><strong>
+            <!-- <#%= #{share_catalog.id} |  %> -->
+            <%= "#{share_catalog.share.securityname}" %>
+          </strong></p>
+        </div>
+        <div class="simple-list-buttons">
+          <% if @user.admin %>
+            <%= f.submit "Remove", class: "btn-remove" %>
           <% end %>
-        <% end %>
+        </div>
+        <div class="simple-list-buttons">
+          <%= link_to "Fiche fonds", share_path(share_catalog.share), class: "btn-display"%>
+        </div>
       </div>
-    </div>
-
+    <% end %>
+  <% end %>
+</div>
   <% if @user.admin %>
+    <h2 style="padding-top:30px"><%= "Add funds to #{@company.name}'s list" %></h2>
     <div class="row">
-      <h4><%= "Add funds to #{@company.name}'s list" %></h4>
       <%= form_tag company_share_catalogs_path, method: :get, class:"form-group form-inline" do %>
           <%= text_field_tag :query,
             params[:query],
@@ -46,10 +61,12 @@
       <% end %>
     </div>
 
-    <div class="row">
-        <p><%= "Results : #{@shares.count}" %></p>
+    <p><%= "Results : #{@shares.count}" %></p>
+
+    <div class="row share-list-row rounded">
         <%= render 'list_shares' %>
     </div>
+
   <% end %>
-  </div>
 </div>
+

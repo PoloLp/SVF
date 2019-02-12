@@ -13,3 +13,28 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+    // font-family:"Roboto", "Helvetica", "sans-serif";
+    font-weight:700;
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2::before {
+    background-color: #F83934;
+    border-radius: 0.25rem;
+    content: '';
+    display: block;
+    height: 0.25rem;
+    width: 100px;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rounded {
+  border-radius: 6px;
+}

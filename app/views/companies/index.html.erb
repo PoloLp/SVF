@@ -1,25 +1,36 @@
 <div class="container">
+  <h2>Companies list : </h2>
     <div class="row">
+
       <div class="col-sm-8">
-        <h1>Companies list : </h1>
       </div>
       <div class="col-sm-4">
-        <h1><%= link_to "Create new company", new_company_path, class: "btn btn-warning"%></h1>
+        <%= link_to "Create new company", new_company_path, class: "btn-create normal-font-button"%>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-          <% @companies.each do |company|%>
-            <div class="col-sm-6">
-              <p><%= "id: #{company.id} | Nom : #{company.name}" %></p>
-            </div>
-            <div class="col-sm-4">
-              <p><%= link_to "Display share list", company_share_catalogs_path(company), class: "btn btn-primary"%></p>
-            </div>
-          <% end %>
-      </div>
-    </div>
+    <div class="row simple-list-row rounded">
+      <% @companies.each do |company|%>
 
+        <div class="simple-list">
+          <div class="simple-list-date">
+            <h6><%= "id: #{company.id}" %></h6>
+          </div>
+          <div class="simple-list-security">
+            <p><strong>
+              <%= "#{company.name}" %>
+            </strong></p>
+          </div>
+          <div class="simple-list-buttons">
+            <%= link_to "Display share list", company_share_catalogs_path(company), class: "btn-display"%>
+          </div>
+          <div class="simple-list-buttons">
+          <!--   <#% if @user.admin %>
+              <#%= f.submit "Remove", class: "btn-remove" %>
+            <#% end %> -->
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
