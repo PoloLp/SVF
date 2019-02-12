@@ -1,40 +1,44 @@
-.client-list {
+.simple-list-row {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
+}
+
+.simple-list {
   display: flex;
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid rgba(67,69,55,0.3);
 }
 
-.client-list-security {
+.simple-list-security {
   flex-grow: 1;
 }
-.client-list-date {
+.simple-list-date {
   padding-left: 10px;
   min-width: 100px;
 }
-.client-list-date h6 {
+.simple-list-date h6 {
   font-size: 13px;
   margin-bottom: 0px;
 }
-.client-list-date p {
+.simple-list-date p {
   font-size: 13px;
   font-weight: lighter;
   opacity: 0.8;
   margin-top: 5px;
 }
-.client-list-security {
+.simple-list-security {
   padding-left: 10px;
   font-size: 18px;
   color: rgba(0,0,0,0.7);
 }
 
-.client-list-security strong{
+.simple-list-security strong{
   color: rgba(67,69,55,0.8);
 }
-.client-list-security p {
+.simple-list-security p {
   margin: 20px 0;
 }
-.client-list-buttons {
+.simple-list-buttons {
   font-size: 14px;
   font-weight: bold;
 }

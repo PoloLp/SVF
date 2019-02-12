@@ -1,67 +1,72 @@
 <div class="container">
-<p>
-  <% if @user.admin %>
-    <%= "#{@user.id} | #{@user.first_name} #{@user.last_name} | admin: #{@user.admin}"%>
-  <% end %>
-</p>
 
+  <h2><%= @share_catalog_list.count %> Fund reviews for : <%= @company.name %></h2>
+
+<!--   <div class="row">
+    <p>
+      <#% if @user.admin %>
+        <#%= "#{@user.id} | #{@user.first_name} #{@user.last_name} | admin: #{@user.admin}"%>
+      <#% end %>
+    </p>
+  </div> -->
+<div class="row simple-list-row rounded"> <!-- style="box-shadow: 0 3px 20px rgba(0, 0, 0, .1)"> -->
+
+
+  <% @share_catalog.each do |share_catalog|%>
+    <%= simple_form_for [@company, share_catalog] do |f| %>
+      <div class="simple-list">
+
+        <div class="simple-list-date">
+          <h6>Date</h6>
+          <p>
+            <% if !share_catalog.share.reviews.last.nil? %>
+              <%= "#{share_catalog.share.reviews.last.created_at.strftime('%d/%m/%Y')}" %>
+            <% else %>
+              <%= "no review" %>
+            <% end %>
+          </p>
+        </div>
+        <div class="simple-list-security">
+          <p><strong>
+            <!-- <#%= #{share_catalog.id} |  %> -->
+            <%= "#{share_catalog.share.securityname}" %>
+          </strong></p>
+        </div>
+        <div class="simple-list-buttons">
+          <% if @user.admin %>
+            <%= f.submit "Remove", class: "btn-remove" %>
+          <% end %>
+        </div>
+        <div class="simple-list-buttons">
+          <%= link_to "Fiche fonds", share_path(share_catalog.share), class: "btn-display"%>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+  <% if @user.admin %>
+    <h2 style="padding-top:30px"><%= "Add funds to #{@company.name}'s list" %></h2>
     <div class="row">
-        <h4><%= @share_catalog_list.count %> Fund reviews for : <%= @company.name %></h4>
+      <%= form_tag company_share_catalogs_path, method: :get, class:"form-group form-inline" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a fund by isin or name" %>
+          <%= select_tag :currency_query, options_for_select([["Euro", "EUR"],
+                                                              ["US Dollar", "USD"],
+                                                              ["GBP", "GBP"]]),
+                                          include_blank: true,
+                                          class:"form-control" %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
     </div>
 
-    <% @share_catalog.each do |share_catalog|%>
-      <%= simple_form_for [@company, share_catalog] do |f| %>
-        <div class="client-list">
+    <p><%= "Results : #{@shares.count}" %></p>
 
-          <div class="client-list-date">
-            <h6>Date</h6>
-            <p>
-              <% if !share_catalog.share.reviews.last.nil? %>
-                <%= "#{share_catalog.share.reviews.last.created_at.strftime('%d/%m/%Y')}" %>
-              <% else %>
-                <%= "no review" %>
-              <% end %>
-            </p>
-          </div>
-          <div class="client-list-security">
-            <p><strong>
-              <!-- <#%= #{share_catalog.id} |  %> -->
-              <%= "#{share_catalog.share.securityname}" %>
-            </strong></p>
-          </div>
-          <div class="client-list-buttons">
-            <% if @user.admin %>
-              <%= f.submit "Remove", class: "btn-remove" %>
-            <% end %>
-          </div>
-          <div class="client-list-buttons">
-            <%= link_to "Fiche fonds", share_path(share_catalog.share), target:"_blank", class: "btn-fiche-fonds"%>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+    <div class="row share-list-row rounded">
+        <%= render 'list_shares' %>
+    </div>
 
-    <% if @user.admin %>
-      <div class="row" style="padding-top:30px">
-        <h4><%= "Add funds to #{@company.name}'s list" %></h4>
-        <%= form_tag company_share_catalogs_path, method: :get, class:"form-group form-inline" do %>
-            <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "Find a fund by isin or name" %>
-            <%= select_tag :currency_query, options_for_select([["Euro", "EUR"],
-                                                                ["US Dollar", "USD"],
-                                                                ["GBP", "GBP"]]),
-                                            include_blank: true,
-                                            class:"form-control" %>
-            <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
-      </div>
-
-      <div class="row">
-          <p><%= "Results : #{@shares.count}" %></p>
-          <%= render 'list_shares' %>
-      </div>
-    <% end %>
-  </div>
+  <% end %>
 </div>
+

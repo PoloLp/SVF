@@ -2,10 +2,12 @@
 
   <% if user_signed_in? && current_user.admin%>
 
-    <div class="row">
-      <p><%= link_to "Access Companies list", companies_path, class: "btn  btn-success"%></p>
+    <h2>Bienvenue</h2>
 
-      <p><%= link_to "Display all fund in companies lists", user_companies_path, class: "btn  btn-success"%></p>
+    <div class="row ">
+      <p><%= link_to "Access Companies list", companies_path, class: "btn-display home-button"%></p>
+
+      <p><%= link_to "Display all fund in companies lists", user_companies_path, class: "btn-display home-button"%></p>
     </div>
 
   <% end %>

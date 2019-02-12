@@ -1,29 +1,37 @@
 <div class="container">
 
-  <div class="row">
+  <h2><%= @share_catalog_list.count %> Fund reviews for all companies</h2>
 
-    <h4><%= @share_catalog_list.count %> Fund reviews for all companies</h4>
+  <div class="row share-list-row rounded">
+    <% @share_catalog_list.each do |share| %>
+      <div class="share-list-item" >
+        <div class="share-list-item-name col-sm-4">
+          <h3>
+            <%= render 'shares/currency_display', share: share %>
+            <%= " - #{share.isin}" %>
+          </h3>
+          <p><%= "Currency S isin : #{share.currencyspecificisin}" %></p>
+        </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-
-        <% @share_catalog_list.each do |share| %>
-
-          <div class="col-sm-8">
-          <p><%= "#{share.securityname} | isin : #{share.isin} " %></p>
-          </div>
-
-          <div class="col-sm-4">
+        <div class="share-list-item-body col-sm-5" >
+          <p><strong><%= link_to share.securityname, share_path(share), target:"_blank"%></strong></p>
+          <p><%= "Nom du fonds : #{share.fundname}" %></p>
+        </div>
+        <div class="col-sm-3">
+          <%= render 'shares/currency_check', share: share %>
+        </div>
+        <div class="col-sm-3 share-list-item-body">
+          <p><strong>
             <% if !share.reviews.last.nil? %>
-              <%= "last updated at : #{share.reviews.last.created_at.strftime('%d/%m/%Y')}" %>
+                <%= "Review last updated at : #{share.reviews.last.created_at.strftime('%d/%m/%Y')}" %>
             <% else %>
-              <%= "no review" %>
+                <%= "No review yet" %>
             <% end %>
-           </div>
-
-        <% end %>
+          </strong></p>
+        </div>
       </div>
-    </div>
+    <% end %>
+
   </div>
 
 <!--   <div class="row">
