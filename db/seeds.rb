@@ -10,16 +10,19 @@ require 'nokogiri'
 Category.destroy_all
 Currency.destroy_all
 Share.destroy_all
-
+Preconisation.destroy_all
 
 puts 'Create shares'
-p '*' *30
+puts '*' *30
 
 
 # Timer ---------------------------------------------
 t1 = Time.now
 
-User.create(email:"polo@gmail.com", password:"123456", password_confirmation:"123456")
+# Create admin polo
+User.create(email:"polo@gmail.com", password:"123456", password_confirmation:"123456", admin:true)
+Company.create(name:"EOS Allocations")
+UserCompany.create(user_id: User.last.id, company_id: Company.last.id)
 
 i= 0
 
@@ -71,11 +74,11 @@ end
 t2 = Time.now
 delta = t2 - t1
 
-p '*' *30
+puts '*' *30
 puts "#{Share.count} shares created in #{delta/60} minutes"
-p '*' *30
+puts '*' *30
 puts 'Create Categories'
-p '*' *30
+puts '*' *30
 
 # Timer ---------------------------------------------
 t1 = Time.now
@@ -119,6 +122,9 @@ puts "#{Category.count} categories created in #{delta} minutes"
 # à faire avec le chemin http !!! -----------------------------
 # http://edw.morningstar.com/GetDictionaryXML.aspx?ClientId=EOS&DicType=TYPECODE&Id=Currency&Search=
 # *****************************************************************
+puts '*' *30
+puts 'Create currencies'
+
 valid_currencies = []
 
 file = File.open('db/currencies.xml')
@@ -141,8 +147,8 @@ end
 Currency.import valid_currencies
 
 
-p '*' *30
-p 'Create preconisations entries'
+puts '*' *30
+puts 'Create preconisations entries'
 
 Preconisation.create(name:'Vendre', value:0)
 Preconisation.create(name:'Alléger', value:1)
