@@ -36,9 +36,9 @@
         </div>
       </div>
       <div class="col-xs-4">
-        <div class="share-item rounded">
 
-          <div class="text-title">
+
+          <div class="">
             <% if !@share.reviews.last.nil? %>
               <% if !@share.reviews.last.preconisation_id.nil?  %>
                 <% if !@share.reviews.last.preconisation_id.zero?  %>
@@ -54,7 +54,8 @@
               <div><%= render "preconisation", precovalue: nil %></div>
             <% end %>
           </div>
-        </div>
+
+
       </div>
     </div>
 

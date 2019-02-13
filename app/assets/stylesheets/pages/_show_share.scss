@@ -5,6 +5,7 @@
   p {
     color: rgba(67,69,55,0.8);
   }
+
 }
 
 .share-item .text-title::before {
@@ -21,4 +22,42 @@
 
 .share-item-shadow {
   box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
+}
+
+.mfc-preco {
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.acheter {
+  background-color:green;
+  margin: auto;
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:700;
+    font-size: 3rem;
+    text-align: center;
+    color:white;
+  }
+  i {
+    font-size: 6rem;
+    color:white;
+  }
+}
+
+.vendre {
+  background-color:red;
+  margin: auto;
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:700;
+    font-size: 3rem;
+    text-align: center;
+    color:white;
+  }
+  i {
+    font-size: 6rem;
+    color:white;
+  }
 }
