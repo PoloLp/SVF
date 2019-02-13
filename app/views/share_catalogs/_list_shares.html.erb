@@ -1,4 +1,5 @@
 <%= form_tag selected_company_share_catalogs_path do %>
+  <div class="row share-list-row rounded">
   <% @shares.each do |share| %>
 
     <div class="share-list-item" >
@@ -30,6 +31,6 @@
       </div>
     </div>
   <% end %>
-
+    </div>
   <%= submit_tag "Add to list", class: "btn-create normal-font-button" %>
 <% end %>
