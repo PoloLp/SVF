@@ -1,0 +1,8 @@
+<% if !precovalue.nil? && !precovalue.zero?  %>
+  <div><%= "#{Preconisation.find(precovalue).name}" %></div>
+  <div><%= "#{Preconisation.find(precovalue).value}" %></div>
+<% else %>
+  <div>C'est nil</div>
+<% end %>
+
+
