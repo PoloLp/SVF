@@ -1,4 +1,21 @@
 .share-item {
-
   padding:20px;
+  background-color: #ECEBE4;
+  margin: 10px;
+  margin-bottom: 15px;
+
 }
+
+
+.share-item .text-title::before {
+  background-color: #153B50;
+  border-radius: 0.25rem;
+  content: '';
+  display: block;
+  height: 0.2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
