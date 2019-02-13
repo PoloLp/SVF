@@ -1,6 +1,47 @@
 <div class="container">
   <h2>Fiche de fonds</h2>
   <%= link_to "Create a new strategy review", new_share_review_path(@share), class: "btn-create normal-font-button"%>
+
+  <div>
+    <div class="row">
+      <div class="col-xs-4 share-item"><%= "Nom du fonds : #{@share.securityname}" %>
+      </div>
+
+      <div class="col-xs-4 share-item"><%= "isin : #{@share.isin}" %>
+      </div>
+
+      <div class="col-xs-4 share-item">
+        <% if !@share.reviews.last.preconisation_id.nil?  %>
+          <% if !@share.reviews.last.preconisation_id.zero?  %>
+            <p><%= "Preconisation : #{Preconisation.find(@share.reviews.last.preconisation_id).name}" %></p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6 share-item"><%= "Dernière mise à jour le #{@share.reviews.last.created_at}" %>
+      </div>
+
+      <div class="col-xs-6 share-item"><%= "Société de gestion : #{@share.companyname}" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 share-item"><%= "investment_strategy : #{@share.reviews.last.investment_strategy}" %>
+      </div>
+      <div class="col-xs-12 share-item"><%= "current_strategy : #{@share.reviews.last.current_strategy}" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-4"><%= "interlocuteur : #{@share.reviews.last.interlocuteur}" %>
+      </div>
+    </div>
+  </div>
+
+  <h2>Historique de commentaires</h2>
+
   <div class="row">
     <div class="col-sm-10">
       <%= "Share name : #{@share.securityname} | isin : #{@share.isin}" %>
