@@ -150,6 +150,7 @@ Currency.import valid_currencies
 puts '*' *30
 puts 'Create preconisations entries'
 
+
 Preconisation.create(name:'Vendre', value:0)
 Preconisation.create(name:'Alléger', value:1)
 Preconisation.create(name:'Neutre', value:2)

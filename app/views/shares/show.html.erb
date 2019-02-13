@@ -4,38 +4,88 @@
 
   <div>
     <div class="row">
-      <div class="col-xs-4 share-item"><%= "Nom du fonds : #{@share.securityname}" %>
+      <div class="col-xs-6">
+        <div class="share-item rounded">
+          <div><p> Nom du fonds </p></div>
+          <div class="text-title lighter-font"><%= "#{@share.securityname}" %></div>
+        </div>
       </div>
 
-      <div class="col-xs-4 share-item"><%= "isin : #{@share.isin}" %>
+      <div class="col-xs-6">
+        <div class="share-item rounded">
+          <div><p>Société de gestion</p></div>
+          <div class="text-title lighter-font"><%= "#{@share.companyname}" %></div>
+        </div>
       </div>
+    </div>
 
-      <div class="col-xs-4 share-item">
-        <% if !@share.reviews.last.preconisation_id.nil?  %>
-          <% if !@share.reviews.last.preconisation_id.zero?  %>
-            <p><%= "Preconisation : #{Preconisation.find(@share.reviews.last.preconisation_id).name}" %></p>
+    <div class="row">
+      <div class="col-xs-4">
+        <div class="share-item rounded">
+          <div><p>Dernière mise à jour</p></div>
+          <% if !@share.reviews.last.nil? %>
+            <div class="text-title lighter-font"><%= "#{@share.reviews.last.created_at}" %></div>
           <% end %>
-        <% end %>
+        </div>
+      </div>
+
+      <div class="col-xs-4">
+        <div class="share-item rounded">
+          <div><p> Code isin </p></div>
+          <div class="text-title lighter-font"><%= "#{@share.isin}" %></div>
+        </div>
+      </div>
+      <div class="col-xs-4">
+
+
+          <div class="">
+            <% if !@share.reviews.last.nil? %>
+              <% if !@share.reviews.last.preconisation_id.nil?  %>
+                <% if !@share.reviews.last.preconisation_id.zero?  %>
+                  <div><%= render "preconisation", precovalue: Preconisation.find(@share.reviews.last.preconisation_id).id %>
+                  </div>
+                <% else %>
+                  <div><%= render "preconisation", precovalue: nil %></div>
+                <% end %>
+              <% else %>
+                <div><%= render "preconisation", precovalue: nil %></div>
+              <% end %>
+            <% else %>
+              <div><%= render "preconisation", precovalue: nil %></div>
+            <% end %>
+          </div>
+
+
       </div>
     </div>
 
     <div class="row">
-      <div class="col-xs-6 share-item"><%= "Dernière mise à jour le #{@share.reviews.last.created_at}" %>
+      <div class="col-xs-12">
+        <div class="share-item rounded share-item-shadow">
+          <div><p>investment_strategy</p></div>
+            <% if !@share.reviews.last.nil? %>
+              <div class="text-title lighter-font"><%= "#{@share.reviews.last.investment_strategy}" %></div>
+            <% end %>
+        </div>
       </div>
-
-      <div class="col-xs-6 share-item"><%= "Société de gestion : #{@share.companyname}" %>
+      <div class="col-xs-12">
+        <div class="share-item rounded share-item-shadow">
+          <div><p>current_strategy</p></div>
+            <% if !@share.reviews.last.nil? %>
+              <div class="text-title lighter-font"><%= "#{@share.reviews.last.current_strategy}" %></div>
+            <% end %>
+        </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-xs-12 share-item"><%= "investment_strategy : #{@share.reviews.last.investment_strategy}" %>
-      </div>
-      <div class="col-xs-12 share-item"><%= "current_strategy : #{@share.reviews.last.current_strategy}" %>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-4"><%= "interlocuteur : #{@share.reviews.last.interlocuteur}" %>
+      <div class="col-xs-4">
+        <div class="share-item rounded">
+          <div><p>interlocuteur</p></div>
+            <% if !@share.reviews.last.nil? %>
+              <div class="text-title lighter-font"><%= "#{@share.reviews.last.interlocuteur}" %></div>
+            <% end %>
+        </div>
       </div>
     </div>
   </div>

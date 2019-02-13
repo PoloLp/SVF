@@ -1,0 +1,41 @@
+<% if !precovalue.nil? && !precovalue.zero?  %>
+  <% if (1..5).include?(precovalue) %>
+
+    <% if precovalue == 1 %>
+      <div class="share-item rounded vendre">
+        <div class="mfc-preco">
+          <i class="fas fa-hand-point-down"></i>
+          <p>Vendre</p>
+        </div>
+      </div>
+    <% elsif precovalue == 2 %>
+      <div class="mfc-preco">
+        <p>Alléger</p>
+        <i class="fas fa-bullhorn"></i>
+      </div>
+    <% elsif precovalue == 3 %>
+      <div class="mfc-preco">
+        <p>Neutre</p>
+        <i class="far fa-meh"></i>
+      </div>
+    <% elsif precovalue == 4 %>
+      <div class="mfc-preco">
+        <p>Conserver</p>
+        <i class="fas fa-cart-plus"></i>
+      </div>
+    <% elsif precovalue == 5 %>
+      <div class="share-item rounded acheter">
+        <div class="mfc-preco">
+          <i class="fas fa-hand-point-up"></i>
+          <p>Acheter</p>
+        </div>
+      </div>
+    <% else %>
+      <div><%= "#{Preconisation.find(precovalue).name}" %></div>
+      <div><%= "#{Preconisation.find(precovalue).value}" %></div>
+    <% end %>
+
+  <% end %>
+<% else %>
+  <div>Non renseigné</div>
+<% end %>

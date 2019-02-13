@@ -1,4 +1,63 @@
 .share-item {
+  padding:15px;
+  background-color: #FFFAFF;
+  margin-bottom: 15px;
+  p {
+    color: rgba(67,69,55,0.8);
+  }
 
-  padding:20px;
+}
+
+.share-item .text-title::before {
+  background-color: #36C9C6;
+  border-radius: 0.25rem;
+  content: '';
+  display: block;
+  height: 0.2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.share-item-shadow {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
+}
+
+.mfc-preco {
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.acheter {
+  background-color:green;
+  margin: auto;
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:700;
+    font-size: 3rem;
+    text-align: center;
+    color:white;
+  }
+  i {
+    font-size: 6rem;
+    color:white;
+  }
+}
+
+.vendre {
+  background-color:red;
+  margin: auto;
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:700;
+    font-size: 3rem;
+    text-align: center;
+    color:white;
+  }
+  i {
+    font-size: 6rem;
+    color:white;
+  }
 }
