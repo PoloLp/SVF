@@ -2,30 +2,6 @@
   <h2>Fiche de fonds</h2>
   <%= link_to "Create a new strategy review", new_share_review_path(@share), class: "btn-create normal-font-button"%>
 
-  <% if !@share.reviews.last.nil? %>
-    <% if !@share.reviews.last.preconisation_id.nil?  %>
-      <% if !@share.reviews.last.preconisation_id.zero?  %>
-        <div><%= render "preconisation", precovalue: Preconisation.find(@share.reviews.last.preconisation_id).id %>
-        </div>
-      <% else %>
-        <div><%= render "preconisation", precovalue: nil %></div>
-      <% end %>
-    <% else %>
-      <div><%= render "preconisation", precovalue: nil %></div>
-    <% end %>
-  <% else %>
-    <div><%= render "preconisation", precovalue: nil %></div>
-  <% end %>
-
-    <div class="footer-icons">
-
-      <i class="fas fa-hand-point-up"></i>
-      <i class="fas fa-cart-plus"></i>
-      <i class="fas fa-bullhorn"></i>
-      <i class="fas fa-hand-point-down"></i>
-      <i class="far fa-meh"></i>
-    </div>
-
   <div>
     <div class="row">
       <div class="col-xs-6">
@@ -61,17 +37,22 @@
       </div>
       <div class="col-xs-4">
         <div class="share-item rounded">
-          <div><p>Preconisation</p></div>
-          <div class="text-title lighter-font">
+
+          <div class="text-title">
             <% if !@share.reviews.last.nil? %>
               <% if !@share.reviews.last.preconisation_id.nil?  %>
                 <% if !@share.reviews.last.preconisation_id.zero?  %>
-                  <%= "#{Preconisation.find(@share.reviews.last.preconisation_id).name}" %>
+                  <div><%= render "preconisation", precovalue: Preconisation.find(@share.reviews.last.preconisation_id).id %>
+                  </div>
+                <% else %>
+                  <div><%= render "preconisation", precovalue: nil %></div>
                 <% end %>
-              <!-- else appeler le render avec une value à non renseigné -->
+              <% else %>
+                <div><%= render "preconisation", precovalue: nil %></div>
               <% end %>
+            <% else %>
+              <div><%= render "preconisation", precovalue: nil %></div>
             <% end %>
-            <i class="far fa-meh"></i>
           </div>
         </div>
       </div>
