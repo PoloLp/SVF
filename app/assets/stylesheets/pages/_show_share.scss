@@ -30,8 +30,7 @@
   align-items:center;
 }
 
-.acheter {
-  background-color:green;
+.preco-tile {
   margin: auto;
   p {
     font-family: 'Open Sans', sans-serif;
@@ -39,25 +38,34 @@
     font-size: 3rem;
     text-align: center;
     color:white;
+    margin-bottom: 0;
+    padding:15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   }
   i {
     font-size: 6rem;
     color:white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   }
 }
 
+
+.acheter {
+  background-color:#04A366;
+}
+
+.conserver {
+  background-color:#0CA4A5;
+}
+
+.neutre {
+  background-color:#677C7F;
+}
+// D0D6B5
+.alleger {
+  background-color:#FF8552;
+}
+
 .vendre {
-  background-color:red;
-  margin: auto;
-  p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight:700;
-    font-size: 3rem;
-    text-align: center;
-    color:white;
-  }
-  i {
-    font-size: 6rem;
-    color:white;
-  }
+  background-color:#FF715B;
 }
