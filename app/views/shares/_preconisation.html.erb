@@ -2,29 +2,35 @@
   <% if (1..5).include?(precovalue) %>
 
     <% if precovalue == 1 %>
-      <div class="share-item rounded vendre">
+      <div class="share-item rounded preco-tile vendre">
         <div class="mfc-preco">
           <i class="fas fa-hand-point-down"></i>
           <p>Vendre</p>
         </div>
       </div>
     <% elsif precovalue == 2 %>
-      <div class="mfc-preco">
-        <p>Alléger</p>
-        <i class="fas fa-bullhorn"></i>
+      <div class="share-item rounded preco-tile alleger">
+        <div class="mfc-preco">
+          <i class="fas fa-bullhorn"></i>
+          <p>Alléger</p>
+        </div>
       </div>
     <% elsif precovalue == 3 %>
-      <div class="mfc-preco">
-        <p>Neutre</p>
-        <i class="far fa-meh"></i>
+      <div class="share-item rounded preco-tile neutre">
+        <div class="mfc-preco">
+          <i class="far fa-meh"></i>
+          <p>Neutre</p>
+        </div>
       </div>
     <% elsif precovalue == 4 %>
-      <div class="mfc-preco">
-        <p>Conserver</p>
-        <i class="fas fa-cart-plus"></i>
+      <div class="share-item rounded preco-tile conserver">
+        <div class="mfc-preco">
+          <i class="fas fa-cart-plus"></i>
+          <p>Conserver</p>
+        </div>
       </div>
     <% elsif precovalue == 5 %>
-      <div class="share-item rounded acheter">
+      <div class="share-item rounded preco-tile acheter">
         <div class="mfc-preco">
           <i class="fas fa-hand-point-up"></i>
           <p>Acheter</p>

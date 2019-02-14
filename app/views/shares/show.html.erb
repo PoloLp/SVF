@@ -24,7 +24,7 @@
         <div class="share-item rounded">
           <div><p>Dernière mise à jour</p></div>
           <% if !@share.reviews.last.nil? %>
-            <div class="text-title lighter-font"><%= "#{@share.reviews.last.created_at}" %></div>
+            <div class="text-title lighter-font"><%= "#{@share.reviews.last.created_at.strftime('%d/%m/%Y')}" %></div>
           <% end %>
         </div>
       </div>
