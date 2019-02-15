@@ -37,11 +37,20 @@
         </div>
       </div>
     <% else %>
-      <div><%= "#{Preconisation.find(precovalue).name}" %></div>
-      <div><%= "#{Preconisation.find(precovalue).value}" %></div>
+      <div class="share-item rounded preco-tile nr">
+        <div class="mfc-preco">
+          <i class="fas fa-circle-notch"></i>
+          <p>Non renseigné</p>
+        </div>
+      </div>
     <% end %>
 
   <% end %>
 <% else %>
-  <div>Non renseigné</div>
+  <div class="share-item rounded preco-tile nr">
+    <div class="mfc-preco">
+      <i class="fas fa-circle-notch"></i>
+      <p>Non renseigné</p>
+    </div>
+  </div>
 <% end %>
