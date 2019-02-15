@@ -1,15 +1,22 @@
 <div class="container">
 
-  <% if user_signed_in? && current_user.admin%>
+  <% if user_signed_in? %>
 
     <h2>Bienvenue</h2>
 
-    <div class="row ">
-      <p><%= link_to "Access Companies list", companies_path, class: "btn-display home-button"%></p>
+    <div class="row">
 
-      <p><%= link_to "Display all fund in companies lists", user_companies_path, class: "btn-display home-button"%></p>
+      <p><%= link_to "Suivi de vos fonds", company_share_catalogs_path(UserCompany.where(user_id:current_user.id).first.company_id), class: "btn-display home-button" %></p>
+
+      <% if  current_user.admin%>
+
+        <p><%= link_to "Access Companies list", companies_path, class: "btn-display home-button"%></p>
+
+        <p><%= link_to "Display all fund in companies lists", user_companies_path, class: "btn-display home-button"%></p>
+
+      <% end %>
     </div>
 
-  <% end %>
+    <% end %>
 
 </div>
