@@ -90,7 +90,7 @@
         <div class="share-item rounded">
           <% if !@category.nil? %>
               <div><p>Catégorie Morningstar</p></div>
-              <% if !@share.reviews.last.nil? && !@category.definitionfrench.nil? %>
+              <% if !@category.definitionfrench.nil? && !@category.definitionfrench.empty? %>
                 <div class="text-title lighter-font"><%= "#{@category.definitionfrench}" %></div>
               <% else %>
                 <div class="text-title lighter-font"><%= "#{@category.definition}" %></div>
