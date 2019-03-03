@@ -90,7 +90,7 @@
         <div class="share-item rounded">
           <% if !@category.nil? %>
               <div><p>Catégorie Morningstar</p></div>
-              <% if !@share.reviews.last.nil? && !@category.definitionfrench.nil? %>
+              <% if !@category.definitionfrench.nil? && !@category.definitionfrench.empty? %>
                 <div class="text-title lighter-font"><%= "#{@category.definitionfrench}" %></div>
               <% else %>
                 <div class="text-title lighter-font"><%= "#{@category.definition}" %></div>
@@ -98,7 +98,14 @@
           <% end %>
         </div>
       </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="share-item rounded">
+          <div><p>Performances</p></div>
+          <div class="text-title lighter-font"><%= @monthly_performance_fund %></div>
+        </div>
+      </div>
     </div>
+
   </div>
 
   <% if current_user.admin %>
