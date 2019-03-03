@@ -88,6 +88,7 @@ valid_categories = []
 # *****************************************************************
 # IMPORT CATEGORIES
 # à faire avec le chemin http !!! -----------------------------
+# http://edw.morningstar.com/GetDictionaryXML.aspx?ClientId=EOS&DicType=TYPECODE&Id=Morningstar%20Category&Search=
 # *****************************************************************
 file = File.open('db/categories.xml')
 document = Nokogiri::XML(file)

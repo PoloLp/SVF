@@ -17,6 +17,9 @@ class SharesController < ApplicationController
 
   def show
     @share = Share.find(params[:id])
+p @share.morningstarcategoryid
+    @category = Category.where(typecode: @share.morningstarcategoryid).first
+p @category
   end
 
   def share_params
