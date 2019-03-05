@@ -81,6 +81,27 @@
     </div>
 
     <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="share-item rounded">
+          <div><p>Performances glissantes</p></div>
+          <div class="text-title lighter-font">
+            <%= column_chart charts_share_morningstar_data_path(secid:@share.secid,
+                morningstar_data_point:"fund_monthly_total_return"), label: "Performance", suffix: "%" , colors: ["rgba(44, 64, 49, 0.7)"], dataset: {borderWidth: 0.2} %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="share-item rounded">
+          <div><p>Performances calendaires </p></div>
+          <div class="text-title lighter-font">
+            <%= column_chart charts_share_morningstar_data_path(secid:@share.secid,
+                morningstar_data_point: "fund_calendar_total_return"), label: "Performance", suffix: "%", colors: ["rgba(255, 137, 102, 0.9)"] , dataset: {borderWidth: 0.2}%>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
       <div class="col-xs-12 col-sm-4">
         <div class="share-item rounded">
           <div><p>interlocuteur</p></div>
@@ -89,6 +110,7 @@
             <% end %>
         </div>
       </div>
+
       <div class="col-xs-12 col-sm-4">
         <div class="share-item rounded">
           <% if !@category.nil? %>
@@ -108,27 +130,6 @@
         </div>
     </div>
       </div>
-
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <div class="share-item rounded">
-          <div><p>Performances glissantes</p></div>
-          <div class="text-title lighter-font">
-            <%= column_chart charts_share_morningstar_data_path(secid:@share.secid,
-                morningstar_data_point:"fund_monthly_total_return"), label: "Performance", suffix: "%" , colors: ["#FF8552"] %>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <div class="share-item rounded">
-          <div><p>Performances calendaires </p></div>
-          <div class="text-title lighter-font">
-            <%= column_chart charts_share_morningstar_data_path(secid:@share.secid,
-                morningstar_data_point: "fund_calendar_total_return"), label: "Performance", suffix: "%", colors: ["#E3170A"] %>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </div>
 
