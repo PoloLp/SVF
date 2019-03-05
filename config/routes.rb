@@ -22,8 +22,7 @@ Rails.application.routes.draw do
   end
 
     namespace :charts do
-      get "share-performance-rolling-period"
-      get "share-performance-calendar-period"
+      get "share-morningstar-data"
     end
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -113,13 +113,19 @@
       <div class="col-xs-12 col-sm-6">
         <div class="share-item rounded">
           <div><p>Performances glissantes</p></div>
-          <div class="text-title lighter-font"><%= bar_chart charts_share_performance_rolling_period_path(secid:@share.secid), defer:true %></div>
+          <div class="text-title lighter-font">
+            <%= column_chart charts_share_morningstar_data_path(secid:@share.secid,
+                morningstar_data_point:"fund_monthly_total_return"), suffix: "%" %>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
         <div class="share-item rounded">
           <div><p>Performances calendaires </p></div>
-          <div class="text-title lighter-font"><%= bar_chart charts_share_performance_calendar_period_path(secid:@share.secid ), defer:true %></div>
+          <div class="text-title lighter-font">
+            <%= column_chart charts_share_morningstar_data_path(secid:@share.secid,
+                morningstar_data_point: "fund_calendar_total_return"), suffix: "%" %>
+          </div>
         </div>
       </div>
     </div>
