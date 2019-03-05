@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+
   resources :shares, only: [:index, :show] do
     resources :reviews, only: [ :new, :create ] do
       collection do
@@ -19,5 +20,10 @@ Rails.application.routes.draw do
       end
     end
   end
+
+    namespace :charts do
+      get "share-performance-rolling-period"
+      get "share-performance-calendar-period"
+    end
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
