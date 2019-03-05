@@ -115,7 +115,7 @@
           <div><p>Performances glissantes</p></div>
           <div class="text-title lighter-font">
             <%= column_chart charts_share_morningstar_data_path(secid:@share.secid,
-                morningstar_data_point:"fund_monthly_total_return"), suffix: "%" %>
+                morningstar_data_point:"fund_monthly_total_return"), label: "Performance", suffix: "%" , colors: ["#FF8552"] %>
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@
           <div><p>Performances calendaires </p></div>
           <div class="text-title lighter-font">
             <%= column_chart charts_share_morningstar_data_path(secid:@share.secid,
-                morningstar_data_point: "fund_calendar_total_return"), suffix: "%" %>
+                morningstar_data_point: "fund_calendar_total_return"), label: "Performance", suffix: "%", colors: ["#E3170A"] %>
           </div>
         </div>
       </div>

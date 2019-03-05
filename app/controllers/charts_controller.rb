@@ -18,6 +18,7 @@ class ChartsController < ApplicationController
   def share_morningstar_data
     # URL Exemple : http://localhost:3000//charts/share-morningstar-data?morningstar_data_point=&secid=F000000DUW
     morningstar_data_point = params[:morningstar_data_point]
+
     if !morningstar_data_point.empty?
       share_data = JSON.parse(parse_xml_morningstar)
       render json: share_data[morningstar_data_point]
@@ -29,6 +30,9 @@ class ChartsController < ApplicationController
   private
 
   def parse_xml_morningstar
+    socially_responsible_fund = { is_socially_responsible:
+      convert_to_boolean(@document.xpath("/FundShareClass/Fund/FundAttributes/SociallyResponsibleFund").text) }
+
     fund_monthly_total_return = {
                                   "1 an": @document.xpath("/FundShareClass/ClassPerformance/Performance/TrailingPerformance[@Type='1000']/TrailingReturn/Return[@Type='1']/ReturnDetail[@TimePeriod='M12']/Value").text.to_f.round(2),
                                   "6 mois": @document.xpath("/FundShareClass/ClassPerformance/Performance/TrailingPerformance[@Type='1000']/TrailingReturn/Return[@Type='1']/ReturnDetail[@TimePeriod='M6']/Value").text.to_f.round(2),
@@ -48,7 +52,16 @@ class ChartsController < ApplicationController
                                   "#{(annee - 6)}": @document.xpath("/FundShareClass/ClassPerformance/Performance/HistoricalPerformance/HistoricalPerformanceDetail[@Year='2013']/ReturnHistory/Return[@Type='1']/ReturnDetail[@TimePeriod='M12']/Value").text.to_f.round(2),
     }
 
-    return JSON.generate(fund_monthly_total_return: fund_monthly_total_return,
+    return JSON.generate(socially_responsible_fund: socially_responsible_fund,
+                         fund_monthly_total_return: fund_monthly_total_return,
                          fund_calendar_total_return: fund_calendar_total_return)
+  end
+
+  def convert_to_boolean(str)
+    if str.to_s == 'true'
+      true
+    elsif str.to_s == 'false'
+      false
+    end
   end
 end
