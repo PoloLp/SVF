@@ -17,6 +17,10 @@ class UserCompaniesController < ApplicationController
     @reviews = Review.where(share_id: @share_catalog_list.ids)
   end
 
+  respond_to do |format|
+    format.html
+  end
+
   private
 
   def share_ids_array(share_catalog)
