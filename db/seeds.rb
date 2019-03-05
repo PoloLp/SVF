@@ -22,7 +22,6 @@ Company.create(name:"EOS Allocations")
 UserCompany.create(user_id: User.last.id, company_id: Company.last.id)
 # Create user Pierre
 User.create(email:"pierre@gmail.com", password:"123456", password_confirmation:"123456", admin:false)
-Company.create(name:"EOS")
 UserCompany.create(user_id: User.last.id, company_id: Company.last.id)
 
 
