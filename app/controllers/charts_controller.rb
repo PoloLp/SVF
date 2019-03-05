@@ -1,5 +1,3 @@
-require "byebug"
-
 class ChartsController < ApplicationController
   before_action :call_morningstar_xml_fund, only: [:share_performance_rolling_period, :share_performance_calendar_period, :share_morningstar_data]
 
