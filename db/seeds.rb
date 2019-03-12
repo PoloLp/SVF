@@ -14,6 +14,7 @@ Preconisation.destroy_all
 
 User.destroy_all
 Company.destroy_all
+Periodicity.destroy_all
 UserCompany.destroy_all
 
 # Create admin polo
@@ -162,10 +163,18 @@ Preconisation.create(name:'Neutre', value:2)
 Preconisation.create(name:'Conserver', value:3)
 Preconisation.create(name:'Acheter', value:4)
 
+puts '*' *30
+puts 'Create periodicities entries'
+
+Periodicity.create(period_end: Date.today.end_of_quarter, name:"Trimestrielle")
+puts "Date de fin de trimestre : #{Date.today.end_of_quarter}"
+Periodicity.create(period_end: Date.today.end_of_month, name:"Mensuelle")
+puts "Date de fin de mois : #{Date.today.end_of_month}"
+
 # IMPORT COMMENTAIRES VIA CSV -------------------------------------------------
 # -----------------------------------------------------------------------------
-  puts 'Create reviews and add shares to share_catalog EOS Allocations'
   puts '*' *30
+  puts 'Create reviews and add shares to share_catalog EOS Allocations'
   # Timer ---------------------------------------------
   t1 = Time.now
 

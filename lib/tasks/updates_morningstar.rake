@@ -48,7 +48,7 @@ namespace :updates_morningstar do
   end
 
 # FETCH FUND MONTHLY PERFORMANCES IN MORNINGSTAR WAREHOUSE ---------------------
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
   task monthly_fund_performance_morningstar: :environment do
     file = open("http://edw.morningstar.com/DataOutput.aspx?Package=EDW&ClientId=EOS&Id=F000000DUW&IDTYpe=FundShareClassId&Content=1471&Currencies=BAS")
     document = Nokogiri::XML(file)
@@ -68,15 +68,23 @@ namespace :updates_morningstar do
   end
 end
 
+# UPDATE DE LA DATE DE FIN DE TRIMESTRE ET FIN DE MOIS -------------------------
+# DANS LA TABLE "periodicities" ------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
+namespace :update_periodicity do
+  desc "TODO"
+  task period_end: :environment do
+    puts '*' * 30
+    puts 'Create periodicities entries'
+# Dates Trimestrielle ----------------------------------------------------------
+    Periodicity.where(name: "Trimestrielle").first.update(period_begin: Date.today.beginning_of_quarter)
+    puts "Date début de trimestre : #{Date.today.beginning_of_quarter}"
+    Periodicity.where(name: "Trimestrielle").first.update(period_end: Date.today.end_of_quarter)
+    puts "Date fin de trimestre : #{Date.today.end_of_quarter}"
+# Dates Mensuelle --------------------------------------------------------------
+    Periodicity.where(name: "Mensuelle").first.update(period_begin: Date.today.beginning_of_month)
+    puts "Date début de mois : #{Date.today.beginning_of_month}"
+    Periodicity.where(name: "Mensuelle").first.update(period_end: Date.today.end_of_month)
+    puts "Date fin de mois : #{Date.today.end_of_month}"
+  end
+end
