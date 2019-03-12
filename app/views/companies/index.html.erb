@@ -21,6 +21,12 @@
               <%= "#{company.name}" %>
             </strong></p>
           </div>
+          <div class="simple-list-security">
+            <% unless company.periodicity_id.nil?  %>
+              <p><%= "Update : #{Periodicity.find(company.periodicity_id).name}" %></p>
+            <% end %>
+<!-- Periodicity.find(id:company.periodicity_id) -->
+          </div>
           <div class="simple-list-buttons">
             <%= link_to "Display share list", company_share_catalogs_path(company), class: "btn-display"%>
           </div>

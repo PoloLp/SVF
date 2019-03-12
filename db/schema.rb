@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_11_213233) do
+ActiveRecord::Schema.define(version: 2019_03_12_182708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2019_02_11_213233) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "periodicity_id"
+    t.index ["periodicity_id"], name: "index_companies_on_periodicity_id"
   end
 
   create_table "currencies", force: :cascade do |t|
@@ -41,6 +43,12 @@ ActiveRecord::Schema.define(version: 2019_02_11_213233) do
     t.string "definition_chinese"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "periodicities", force: :cascade do |t|
+    t.string "name"
+    t.date "period_end"
+    t.date "period_begin"
   end
 
   create_table "preconisations", force: :cascade do |t|
