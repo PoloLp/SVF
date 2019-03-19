@@ -17,17 +17,24 @@
           <p><strong><%= link_to share.securityname, share_path(share), target:"_blank"%></strong></p>
           <p><%= "Nom du fonds : #{share.fundname}" %></p>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-2">
           <%= render 'shares/currency_check', share: share %>
         </div>
-        <div class="col-sm-3 share-list-item-body">
+        <div class="col-sm-4 share-list-item-body">
           <p><strong>
             <% if !share.reviews.last.nil? %>
-                <%= "Review last updated at : #{share.reviews.last.created_at.strftime('%d/%m/%Y')}" %>
+                <%= "Dernière MAJ : #{share.reviews.last.created_at.strftime('%d/%m/%Y')}" %>
             <% else %>
                 <%= "No review yet" %>
             <% end %>
           </strong></p>
+          <p>
+            <% if !share.reviews.last.nil? %>
+                <%= "Périodicité MAJ  : #{share.reviews.last.created_at.strftime('%d/%m/%Y')}" %>
+            <% else %>
+                <%= "No review yet" %>
+            <% end %>
+          </p>
         </div>
       </div>
     <% end %>
