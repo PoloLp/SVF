@@ -7,10 +7,20 @@ class UserCompaniesController < ApplicationController
 
     @share_catalog_list = Share.where(id: share_ids_array(@share_catalog)).asc_review
 
+    @min_periods = []
+
     @share_catalog_list.each do |share|
-      p "Resultat méthiode #{share_periodicity(share)}"
+      min_date = share_periodicity(share)
+
+      @min_periods << min_date.min_by { |k| k[:period_end] }
+    puts "*" * 100
+    puts "#{share.securityname} --> #{min_date.min_by { |k| k[:period_end] }} "
+    puts "*" * 200
+    puts "résultat #{min_date.min_by { |k| k[:period_end] }}"
+
     end
 
+    puts @min_periods
     # conserver pour test --------------------
     # @share_catalog_list.each do |share|
     #   if !share.reviews.last.nil?
@@ -19,6 +29,7 @@ class UserCompaniesController < ApplicationController
     #     p "no review"
     #   end
     # end
+
     @reviews = Review.where(share_id: @share_catalog_list.ids)
 
     @companies.each do |company|
@@ -30,30 +41,32 @@ class UserCompaniesController < ApplicationController
     format.html
   end
 
+  private
+
   def share_periodicity(share)
+    periods = []
+    d = Time.new(3000, 1, 1)
     list_share_catalog = ShareCatalog.where(share_id: share.id, status: true)
 
-    periods = []
-
     list_share_catalog.each do |share_catalog|
-      periodicities_hash = Hash.new
-      periodicities_hash = { share_id: share_catalog.share_id,
-                             company_id: share_catalog.company_id,
-                             periodicity_id: Company.find(share_catalog.company_id).periodicity_id }
+      company = Company.find(share_catalog.company_id)
+      period_end = Periodicity.find(company.periodicity_id).period_end unless company.periodicity_id.nil?
 
-      periods << periodicities_hash unless periodicities_hash[:periodicity_id].nil?
+      if company.periodicity_id.nil?
+        periodicities_hash = { share_id: share_catalog.share_id,
+                               company_id: share_catalog.company_id,
+                               periodicity_id: 0,
+                               period_end: d }
+      else
+        periodicities_hash = { share_id: share_catalog.share_id,
+                               company_id: share_catalog.company_id,
+                               periodicity_id: company.periodicity_id,
+                               period_end: period_end }
+      end
+      periods << periodicities_hash
     end
-
-# ***************************************************************************
-      # puts periods.max_by { |k| k[:periodicity_id] }[:periodicity_id] unless periods.empty?
-# ***************************************************************************
-
-    return periods unless periods.empty?
-
-    return 0
+    return periods
   end
-
-  private
 
   def share_ids_array(share_catalog)
     sia = []
