@@ -1,4 +1,6 @@
 require 'byebug'
+require 'date'
+
 class UserCompaniesController < ApplicationController
   def index
     @user = current_user
@@ -13,14 +15,14 @@ class UserCompaniesController < ApplicationController
       min_date = share_periodicity(share)
 
       @min_periods << min_date.min_by { |k| k[:period_end] }
-    puts "*" * 100
-    puts "#{share.securityname} --> #{min_date.min_by { |k| k[:period_end] }} "
-    puts "*" * 200
-    puts "résultat #{min_date.min_by { |k| k[:period_end] }}"
-
+    # puts "*" * 100
+    # puts "#{share.securityname} --> #{min_date.min_by { |k| k[:period_end] }} "
+    # puts "*" * 200
+    # puts "résultat #{min_date.min_by { |k| k[:period_end] }}"
     end
 
     puts @min_periods
+    # puts "recherche dans @min_periods #{@min_periods.min_by { |k| k[:period_end] }}"
     # conserver pour test --------------------
     # @share_catalog_list.each do |share|
     #   if !share.reviews.last.nil?
@@ -45,27 +47,46 @@ class UserCompaniesController < ApplicationController
 
   def share_periodicity(share)
     periods = []
-    d = Time.new(3000, 1, 1)
+    d = Date.new(3000, 1, 1)
     list_share_catalog = ShareCatalog.where(share_id: share.id, status: true)
 
     list_share_catalog.each do |share_catalog|
       company = Company.find(share_catalog.company_id)
+      share = Share.find(share_catalog[:share_id])
       period_end = Periodicity.find(company.periodicity_id).period_end unless company.periodicity_id.nil?
+      outdated = check_outdated(period_end, share) unless period_end.nil?
 
       if company.periodicity_id.nil?
         periodicities_hash = { share_id: share_catalog.share_id,
                                company_id: share_catalog.company_id,
                                periodicity_id: 0,
-                               period_end: d }
+                               period_end: d,
+                               outdated: 0 }
       else
         periodicities_hash = { share_id: share_catalog.share_id,
                                company_id: share_catalog.company_id,
                                periodicity_id: company.periodicity_id,
-                               period_end: period_end }
+                               period_end: period_end,
+                               outdated: outdated }
       end
+
       periods << periodicities_hash
     end
+
     return periods
+  end
+
+  def check_outdated(period_end, share)
+    days_to_date = (period_end - Date.today).to_i
+    last_update = (period_end - share.reviews.last.created_at.to_date).to_i unless share.reviews.last.nil?
+
+    return 0 if (!last_update.nil? && last_update < 30) || days_to_date > 12
+
+    if days_to_date <= 12
+      return 1
+    else
+      return 2
+    end
   end
 
   def share_ids_array(share_catalog)
