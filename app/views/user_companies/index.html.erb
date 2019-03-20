@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h2><%= @share_catalog_list.count %> Fund reviews for all companies</h2>
+  <h2><%= @share_catalog_list.count %> Fonds à suivre pour toutes les sociétés</h2>
 
   <div class="row share-list-row rounded">
     <% @share_catalog_list.each do |share| %>
@@ -29,10 +29,10 @@
             <% end %>
           </strong></p>
           <p>
-            <% if !share.reviews.last.nil? %>
-                <%= "MAJ à faire le  : #{}" %>
+            <% if @min_periods.find { |k| k[:share_id] == share.id }[:period_end].strftime('%d/%m/%Y') == "01/01/3000" %>
+              <%= "Suivi EOS Allocations" %>
             <% else %>
-                <%= "Suivi EOS Allocations" %>
+                <%= "MAJ à faire le  : #{@min_periods.find { |k| k[:share_id] == share.id }[:period_end].strftime('%d/%m/%Y')}" %>
             <% end %>
           </p>
         </div>
@@ -41,6 +41,7 @@
 
   </div>
 
+<%= @min_periods %>
 <!--   <div class="row">
     <#% @companies.each do |company| %>
       <p><#%= company.name %></p>
