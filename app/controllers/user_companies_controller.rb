@@ -1,4 +1,3 @@
-require 'byebug'
 require 'date'
 
 class UserCompaniesController < ApplicationController
@@ -13,24 +12,10 @@ class UserCompaniesController < ApplicationController
 
     @share_catalog_list.each do |share|
       min_date = share_periodicity(share)
-
       @min_periods << min_date.min_by { |k| k[:period_end] }
-    # puts "*" * 100
-    # puts "#{share.securityname} --> #{min_date.min_by { |k| k[:period_end] }} "
-    # puts "*" * 200
-    # puts "résultat #{min_date.min_by { |k| k[:period_end] }}"
     end
 
     puts @min_periods
-    # puts "recherche dans @min_periods #{@min_periods.min_by { |k| k[:period_end] }}"
-    # conserver pour test --------------------
-    # @share_catalog_list.each do |share|
-    #   if !share.reviews.last.nil?
-    #     p "isin : #{share.isin} - fonds : #{share.securityname} #{share.reviews.last.created_at}"
-    #   else
-    #     p "no review"
-    #   end
-    # end
 
     @reviews = Review.where(share_id: @share_catalog_list.ids)
 
