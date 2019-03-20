@@ -30,7 +30,7 @@
           </strong></p>
           <p>
             <% if !share.reviews.last.nil? %>
-                <%= "MAJ à faire le  : #{}" %>
+                <%= "MAJ à faire le  : #{@min_periods.find {|x| x[:share_id] == share.id }[:period_end].strftime('%d/%m/%Y')}" %>
             <% else %>
                 <%= "Suivi EOS Allocations" %>
             <% end %>
