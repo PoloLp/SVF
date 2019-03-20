@@ -1,10 +1,18 @@
+nb jours pour alerte : 12
 <div class="container">
 
   <h2><%= @share_catalog_list.count %> Fonds à suivre pour toutes les sociétés</h2>
 
   <div class="row share-list-row rounded">
     <% @share_catalog_list.each do |share| %>
-      <div class="share-list-item" >
+      <% if @min_periods.find { |k| k[:share_id] == share.id }[:outdated] == 0  %>
+        <% class_period = "" %>
+      <% elsif @min_periods.find { |k| k[:share_id] == share.id }[:outdated] == 1  %>
+        <% class_period = "warning-tile" %>
+      <% else %>
+        <% class_period = "" %>
+      <% end %>
+      <div class="share-list-item <%= class_period %>" >
         <div class="share-list-item-name col-sm-4">
           <h3>
             <%= render 'shares/currency_display', share: share %>
@@ -32,7 +40,7 @@
             <% if @min_periods.find { |k| k[:share_id] == share.id }[:period_end].strftime('%d/%m/%Y') == "01/01/3000" %>
               <%= "Suivi EOS Allocations" %>
             <% else %>
-                <%= "MAJ à faire le  : #{@min_periods.find { |k| k[:share_id] == share.id }[:period_end].strftime('%d/%m/%Y')}" %>
+                <strong><%= "MAJ à faire le  : #{@min_periods.find { |k| k[:share_id] == share.id }[:period_end].strftime('%d/%m/%Y')}" %></strong>
             <% end %>
           </p>
         </div>
@@ -41,7 +49,6 @@
 
   </div>
 
-<%= @min_periods %>
 <!--   <div class="row">
     <#% @companies.each do |company| %>
       <p><#%= company.name %></p>
