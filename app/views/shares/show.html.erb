@@ -27,24 +27,23 @@
 
     </div>
 
-    <div class="row">
+    <div class="row wrap-display">
       <div class="col-xs-12 col-sm-4">
-        <div class="">
+
           <% if !@share.reviews.last.nil? %>
             <% if !@share.reviews.last.preconisation_id.nil?  %>
               <% if !@share.reviews.last.preconisation_id.zero?  %>
-                <div><%= render "preconisation", precovalue: Preconisation.find(@share.reviews.last.preconisation_id).id %>
-                </div>
+                <%= render "preconisation", precovalue: Preconisation.find(@share.reviews.last.preconisation_id).id %>
               <% else %>
-                <div><%= render "preconisation", precovalue: nil %></div>
+                <%= render "preconisation", precovalue: nil %>
               <% end %>
             <% else %>
-              <div><%= render "preconisation", precovalue: nil %></div>
+              <%= render "preconisation", precovalue: nil %>
             <% end %>
           <% else %>
-            <div><%= render "preconisation", precovalue: nil %></div>
+            <%= render "preconisation", precovalue: nil %>
           <% end %>
-        </div>
+
       </div>
       <div class="col-xs-12 col-sm-4">
         <div class="share-item rounded">
