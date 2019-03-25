@@ -1,12 +1,9 @@
 .share-item {
   padding:15px;
-  background-color: red;
+  background-color: #FFFAFF;
   margin-bottom: 15px;
   p {
-      margin-top: 20px;
-      border-radius: 6px 6px 0 0;
-      background-color: red ;
-      padding: 1em 1em 0.5em 1em;
+    color: rgba(67,69,55,0.8);
   }
 }
 
@@ -80,4 +77,7 @@
 .image-isr {
   max-width:100%;
   max-height:100%;
+}
+.header-isr {
+  background-color:red;
 }
