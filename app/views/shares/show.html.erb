@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
-        <div class="share-item rounded">
+        <div class="share-item rounded header-item">
           <div><p> Code isin </p></div>
           <div class="text-title lighter-font"><%= "#{@share.isin}" %></div>
         </div>
@@ -54,9 +54,11 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-4">
-        <div class="share-item rounded">
-          <div><p>Investissement responsable</p></div>
-          <div class="text-title lighter-font"></div>
+        <% if @share.isisr %>
+          <%= render "isr_tile", isisr: false %>
+        <% end %>
+<!--           <div><p>Investissement responsable</p></div>
+          <div class="text-title lighter-font"></div> -->
         </div>
       </div>
     </div>

@@ -1,0 +1,17 @@
+.share-item-isr {
+  padding:15px;
+  background-color: #29E7CD;
+  margin: auto auto 15px auto;
+
+}
+
+.share-item-isr .text-title::before {
+  border-radius: 0.25rem;
+  content: '';
+  display: block;
+  height: 0.2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+ }
