@@ -12,6 +12,7 @@ gem 'activerecord-import'
 gem 'nokogiri'
 gem 'chartkick'
 gem 'groupdate'
+gem 'cloudinary', '~> 1.9.1'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
