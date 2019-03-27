@@ -1,15 +1,14 @@
 <%= javascript_include_tag 'application' %>
 
-
 <div class="container">
   <h2><%= "#{@share.securityname}" %></h2>
 
   <div>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <div class="share-item rounded">
+        <div class="share-item rounded classic share-item-shadow">
           <% if !@category.nil? %>
-              <div><p>Catégorie Morningstar</p></div>
+              <div class="header-tile"><p>Catégorie Morningstar</p></div>
               <% if !@category.definitionfrench.nil? && !@category.definitionfrench.empty? %>
                 <div class="text-title lighter-font"><%= "#{@category.definitionfrench}" %></div>
               <% else %>
@@ -19,8 +18,8 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
-        <div class="share-item rounded header-item">
-          <div><p> Code isin </p></div>
+        <div class="share-item rounded classic share-item-shadow" >
+          <div class="header-tile"><p> Code isin </p></div>
           <div class="text-title lighter-font"><%= "#{@share.isin}" %></div>
         </div>
       </div>
@@ -46,7 +45,7 @@
 
       </div>
       <div class="col-xs-12 col-sm-4">
-        <div class="share-item rounded">
+        <div class="share-item rounded share-item-shadow">
           <div><p>Dernière mise à jour</p></div>
           <% if !@share.reviews.last.nil? %>
             <div class="text-title lighter-font"><%= "#{@share.reviews.last.created_at.strftime('%d/%m/%Y')}" %></div>
@@ -65,8 +64,8 @@
 
     <div class="row">
       <div class="col-xs-12">
-        <div class="share-item rounded share-item-shadow">
-          <div><p>Actualité</p></div>
+        <div class="share-item rounded classic share-item-shadow">
+          <div class="header-tile"><p>Actualité</p></div>
             <% if !@share.reviews.last.nil? %>
               <div class="text-title lighter-font"><%= "#{@share.reviews.last.current_strategy}" %></div>
             <% end %>
@@ -76,8 +75,8 @@
 
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <div class="share-item rounded">
-          <div><p>Performances glissantes</p></div>
+        <div class="share-item rounded classic share-item-shadow">
+          <div class="header-tile"><p>Performances glissantes</p></div>
           <div class="text-title lighter-font">
             <%= column_chart charts_share_morningstar_data_path(secid:@share.secid,
                 morningstar_data_point:"fund_monthly_total_return"), label: "Performance", suffix: "%" , colors: ["rgba(44, 64, 49, 0.7)"], dataset: {borderWidth: 0.2} %>
@@ -85,8 +84,8 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
-        <div class="share-item rounded">
-          <div><p>Performances calendaires </p></div>
+        <div class="share-item rounded classic share-item-shadow">
+          <div class="header-tile"><p>Performances calendaires </p></div>
           <div class="text-title lighter-font">
             <%= column_chart charts_share_morningstar_data_path(secid:@share.secid,
                 morningstar_data_point: "fund_calendar_total_return"), label: "Performance", suffix: "%", colors: ["rgba(255, 137, 102, 0.9)"] , dataset: {borderWidth: 0.2}%>
@@ -97,8 +96,8 @@
 
     <div class="row">
       <div class="col-xs-12">
-        <div class="share-item rounded share-item-shadow">
-          <div><p>Structure</p></div>
+        <div class="share-item rounded classic share-item-shadow">
+          <div class="header-tile"><p>Structure</p></div>
             <% if !@share.reviews.last.nil? %>
               <div class="text-title lighter-font"><%= "#{@share.reviews.last.investment_strategy}" %></div>
             <% end %>
@@ -108,22 +107,23 @@
 
     <div class="row">
       <div class="col-xs-12 col-sm-4">
-        <div class="share-item rounded">
-          <div><p>interlocuteur</p></div>
+        <div class="share-item rounded classic share-item-shadow">
+          <div class="header-tile"><p>Interlocuteur</p></div>
             <% if !@share.reviews.last.nil? %>
               <div class="text-title lighter-font"><%= "#{@share.reviews.last.interlocuteur}" %></div>
             <% end %>
         </div>
       </div>
       <div class="col-xs-12 col-sm-4">
-        <div class="share-item rounded">
-          <div><p>Société de gestion</p></div>
+        <div class="share-item rounded classic share-item-shadow">
+          <div class="header-tile"><p>Société de gestion</p></div>
           <div class="text-title lighter-font"><%= "#{@share.companyname}" %></div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-4">
-        <div class="share-item rounded">
-
+        <div class="share-item rounded classic share-item-shadow">
+          <div class="header-tile"><p>Autre</p></div>
+          <div class="text-title lighter-font">text</div>
         </div>
       </div>
     </div>
