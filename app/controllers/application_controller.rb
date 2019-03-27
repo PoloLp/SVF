@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     if current_user.admin?
       root_path
     else
-      company_share_catalogs_path(current_user)
+      company_share_catalogs_path(UserCompany.where(user_id: current_user).first.company_id)
     end
   end
 end
