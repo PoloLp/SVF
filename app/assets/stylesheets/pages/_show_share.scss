@@ -1,6 +1,13 @@
 .wrap-display {
-  height: auto;
   display: flex;
   align-items: center;
+
   flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto;
+  padding-top: 15px;
+  margin: 0px 0 15px 0;
+  background-color:white;
+  border-right: 3px solid  #082d4c;
+  border-left: 3px solid  #082d4c;
 }
