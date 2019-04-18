@@ -1,5 +1,5 @@
 # *********************************************************************
-# COMMANDE LANCEMMENT DES TACHES DEPUIS TERMINAL:
+# COMMANDE LANCEMENT DES TACHES DEPUIS TERMINAL:
 # rake update_periodicity:period_end
 # *********************************************************************
 
@@ -8,9 +8,9 @@
 
 namespace :update_periodicity do
   desc "TODO"
-  task period_end: :environment do
+  task update_period_end: :environment do
     puts '*' * 30
-    puts 'Create periodicities entries'
+    puts 'Update periodicities entries'
 # Dates Trimestrielle ----------------------------------------------------------
     Periodicity.where(name: "Trimestrielle").first.update(period_begin: Date.today.beginning_of_quarter)
     puts "Date début de trimestre : #{Date.today.beginning_of_quarter}"
