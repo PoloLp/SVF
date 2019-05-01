@@ -50,9 +50,13 @@ class ChartsController < ApplicationController
                                   "#{(annee - 6)}": @document.xpath("/FundShareClass/ClassPerformance/Performance/HistoricalPerformance/HistoricalPerformanceDetail[@Year='2013']/ReturnHistory/Return[@Type='1']/ReturnDetail[@TimePeriod='M12']/Value").text.to_f.round(2),
     }
 
+    test_xml_field = { test: @document.xpath("/FundShareClass/Fund/FundBasics/PrimaryBenchmark/HoldingDetail/SecurityName").text,
+                        test2: @document.xpath("/FundShareClass/Fund/FundBasics/PrimaryBenchmark/HoldingDetail/Weighting").text}
+
     return JSON.generate(socially_responsible_fund: socially_responsible_fund,
                          fund_monthly_total_return: fund_monthly_total_return,
-                         fund_calendar_total_return: fund_calendar_total_return)
+                         fund_calendar_total_return: fund_calendar_total_return,
+                         test_xml_field: test_xml_field)
   end
 
   def convert_to_boolean(str)
@@ -62,4 +66,6 @@ class ChartsController < ApplicationController
       false
     end
   end
+
+
 end
