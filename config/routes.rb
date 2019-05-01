@@ -21,8 +21,11 @@ Rails.application.routes.draw do
     end
   end
 
-    namespace :charts do
-      get "share-morningstar-data"
-    end
+  namespace :charts do
+    get "share-morningstar-data"
+  end
+  namespace :share_datas do
+    get "share_search"
+  end
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
