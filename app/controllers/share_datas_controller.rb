@@ -1,11 +1,11 @@
 class ShareDatasController < ApplicationController
   before_action :call_morningstar_xml_fund, only: [:share_search]
-# mettre le get universe
   def call_morningstar_xml_fund
     secid = params[:secid]
+    # Univers MS : France
     file = open("http://edw.morningstar.com/GetUniverseXML.aspx?ClientId=EOS&CountryId=FRA&LegalStructureId=&FundShareClassId=" +
                 secid +
-                "&ISIN=&Name=&RegionId=&OldestShareClass=&Offshore=&StartDate=&EndDate=&SearchInPrivateList=0&NameSearch=1&ActiveStatus=1")
+                "&ISIN=&Name=helium%20performance&RegionId=&OldestShareClass=&Offshore=&StartDate=&EndDate=&SearchInPrivateList=0&NameSearch=1&ActiveStatus=1")
     @document = Nokogiri::XML(file)
   end
 
