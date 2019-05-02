@@ -159,28 +159,7 @@
       </div>
     </div>
   <% end %>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="share-item rounded">
-      <%= link_to "Call Ajax", '#', id: 'AjaxButton',class: "btn-create normal-font-button"%>
-        <%= column_chart share_datas_share_search_path(secid:'')%>
-      </div>
-    </div>
-  </div>
+
 </div>
 
-<script>
-  const button = document.querySelector('#AjaxButton');
-  const url = 'http://localhost:3000//share_datas/share_search?morningstar_data_point=&query='
-  button.addEventListener('click', (event) => {
 
-    event.currentTarget.innerText = 'Hold still...';
-    event.currentTarget.setAttribute("disabled", "");
-    fetch(url)
-      .then(response => response.json())
-      .then((data) => {
-        console.log(data);
-      });
-
-  });
-</script>
