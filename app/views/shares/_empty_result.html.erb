@@ -1,18 +1,5 @@
 <div class="row">
     <div class="share-item rounded">
       <p>Fonds non trouvé en base de données</p>
-      <div>
-        <%= form_tag shares_path, method: :post, class:"form-group form-inline" do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            id: "placeholder-search-ms",
-            placeholder: "isin, secid ou nom" %>
-          <div id= "LookInMs" class= "btn-create normal-font-button">
-            Cliquez ici pour rechercher dans la base Morningstar
-          </div>
-        <% end %>
-        <%= render 'data_provider_form' %>
-      </div>
   </div>
 </div>
