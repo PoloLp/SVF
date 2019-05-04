@@ -3,29 +3,32 @@
   <div class="row">
     <h2>Recherche de parts pour édition</h2>
     <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
-      <div id="search-form-db" class="row">
-        <%= form_tag shares_path, method: :get, class:"form-group form-inline" do %>
-            <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              id: "placeholder-search-db",
-              placeholder: "isin ou nom de part" %>
-            <%= select_tag :currency_query, options_for_select([["Euro", "EUR"],
-                                                                ["US Dollar", "USD"],
-                                                                ["GBP", "GBP"]]),
-                                            include_blank: true,
-                                            class:"form-control" %>
-            <%= submit_tag "Search", class: "btn btn-primary" %>
-        <div id="OpenLookInMs"class="btn btn-danger">
-            Morningstar Search
+      <div class="row">
+        <div id="search-form-db" >
+          <%= form_tag shares_path, method: :get, class:"form-group form-inline" do %>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                id: "placeholder-search-db",
+                placeholder: "isin ou nom de part" %>
+              <%= select_tag :currency_query, options_for_select([["Euro", "EUR"],
+                                                                  ["US Dollar", "USD"],
+                                                                  ["GBP", "GBP"]]),
+                                              include_blank: true,
+                                              class:"form-control" %>
+              <%= submit_tag "Search", class: "btn btn-primary" %>
+          <% end %>
+          <div>
+            <input id="OpenLookInMs" type="submit" class="btn btn-danger" value="Morningstar Search">
+          </div>
         </div>
-        <% end %>
-      </div>
-      <div id="Sharelist1">
-        <%= render 'empty_result' unless !@shares.empty? || params[:query].nil? %>
       </div>
     </div>
-  </div>
+    <div div class="row"></div>
+      <div id="Sharelist1">
+        <%= render 'empty_result' if @shares.empty? || params[:query].nil? %>
+      </div>
+    </div>
 
   <div id="search-form-ms" class="row hidden">
     <div class="col-xs-12">
@@ -44,6 +47,7 @@
 <script>
 
 // LU0912262358
+  const url = 'http://localhost:3000//share_datas/share_search?morningstar_data_point=&query='
 
   const form_Search_Db = document.querySelector('#search-form-db');
   const placeholder_search_db = document.querySelector('#placeholder-search-db');
@@ -52,49 +56,75 @@
   const button_Look_In_Ms = document.querySelector('#LookInMs');
   const button_open_Look_InMs = document.querySelector('#OpenLookInMs');
   const button_Cancel_Look_InMs = document.querySelector('#CancelLookInMs');
-  const url = 'http://localhost:3000//share_datas/share_search?morningstar_data_point=&query='
+  const button_New_Look_InMs = document.querySelector('#NewLookInMs');
+
+  //////////////////////////////////////
 
   button_Look_In_Ms.addEventListener('click', (event) => {
     if (placeholder_search_ms.value !== '') {
+      if (document.querySelector('#nb_results')) {
+        DeleteResult();
+      };
       fetchDataProvider(placeholder_search_ms.value, event.currentTarget, );
     }
   });
 
-// Attention les toggles déconnent ////////////////////////////////////
-
   button_open_Look_InMs.addEventListener('click', (event) => {
-    form_Search_Ms.classList.toggle("hidden");
-  })
-
-  button_Cancel_Look_InMs.addEventListener('click', (event) => {
-    form_Search_Db.classList.toggle("hidden");
     form_Search_Ms.classList.toggle("hidden");
   });
 
-  // Attention les toggles déconnent ////////////////////////////////////
+  button_Cancel_Look_InMs.addEventListener('click', (event) => {
+    form_Search_Ms.classList.toggle("hidden");
+  });
+
+  button_New_Look_InMs.addEventListener('click', (event) => {
+    if (document.querySelector('#nb_results')) {
+      DeleteResult();
+    };
+    button_Look_In_Ms.value = 'Cliquez ici pour rechercher dans la base Morningstar';
+    button_Look_In_Ms.disabled = false;
+    button_New_Look_InMs.classList.toggle("hidden");
+  });
+
+  //////////////////////////////////////
 
   function fetchDataProvider(search_value, target) {
 
     console.log('fetching datas --> ' + search_value);
-    target.innerText = 'Recherche en cours...';
-    target.setAttribute("disabled", "");
-
+    target.value = 'Recherche en cours...';
+    target.setAttribute("disabled", '');
     fetch(url + search_value)
       .then(response => response.json())
       .then((data) => {
-        console.log(data.numbers_result);
+
+        const nb_results = `<p id="nb_results">Nombre de fonds trouvés : ${data.numbers_result}</p>`;
+        results.insertAdjacentHTML("beforebegin", nb_results);
+
         data.result.forEach((result) => {
+          console.log(result.isin);
+          // <#%= @isin  %> = result.isin;
+          // <#%= new_share = Share.new(isin: @isin) %>
+
+          <%= x=1 %>
           const share = `<li>
                             <p>${result.id}</p>
                             <p>${result.isin}</p>
                             <p>${result.name}</p>
                           </li>`;
           results.insertAdjacentHTML("beforeend", share);
-          results.insertAdjacentHTML("beforeend", data);
         });
-        target.innerText = 'Recherche terminée!';
+        target.value = 'Recherche terminée !';
       });
-    form_Search_Db.classList.toggle("hidden");
-  }
+    button_New_Look_InMs.classList.toggle("hidden");
+  };
 
+  function DeleteResult() {
+    const results = document.querySelector('#results');
+    document.querySelector('#nb_results').remove();
+    if (results.getElementsByTagName("li").length > 0) {
+      while( results.firstChild ){
+        results.removeChild(results.firstChild );
+      };
+    };
+  };
 </script>

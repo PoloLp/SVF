@@ -1,9 +1,28 @@
 <!-- Afficher les résultats dans un form -->
 <div class="share-list-item" >
   <div><input id= "placeholder-search-ms" class="form-control" placeholder= "isin, secid ou nom" type="text"></div>
-  <div id= "LookInMs" class= "btn-display home-button">Cliquez ici pour rechercher dans la base Morningstar</div>
-  <div id= "NewLookInMs" class= "btn-display home-button hidden">Nouvelle recherche</div>
-  <div id= "CancelLookInMs" class= "btn-create normal-font-button">Annuler</div>
+  <div><input id="LookInMs" type="submit" class="btn-display home-button" value="Cliquez ici pour rechercher dans la base Morningstar"></div>
+  <div id="NewLookInMs" class="hidden"><input type="submit" class="btn-create normal-font-button" value="Nouvelle recherche"></div>
+  <div><input id="CancelLookInMs" type="submit" class="btn-create normal-font-button" value="Fermer"></div>
 </div>
 
-<ul id="results"></ul>
+  <%= simple_form_for Share.new, :remote => true do |f| %>
+    <%= f.input :isin %>
+    <%= f.submit "ajouter le fonds en db", class: "btn btn-primary" %>
+  <% end %>
+
+
+  <ul id="results">
+    <li>
+      <div>
+        <input type="checkbox">
+      </div>
+      <div>
+        <p>coucou</p>
+        <p>coucou</p>
+        <p>coucou</p>
+      </div>
+    </li>
+  </ul>
+
+</form>

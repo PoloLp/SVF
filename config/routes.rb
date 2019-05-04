@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :shares, only: [:index, :show] do
+  resources :shares, only: [:index, :show, :create] do
     resources :reviews, only: [ :new, :create ] do
       collection do
         post 'new_multiple'

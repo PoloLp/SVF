@@ -1,5 +1,7 @@
 class ShareDatasController < ApplicationController
   before_action :call_morningstar_xml_fund, only: [:share_search]
+
+# Get Universe ////////////////////////////////////////////////////////////////
   def call_morningstar_xml_fund
     # secid = params[:secid]
     query = params[:query]
@@ -24,7 +26,6 @@ class ShareDatasController < ApplicationController
                 "&Name=" +
                 name_query + "&RegionId=&OldestShareClass=&Offshore=&StartDate=&EndDate=&SearchInPrivateList=0&NameSearch=1&ActiveStatus=1")
     @document = Nokogiri::XML(file)
-
   end
 
   def share_search
@@ -41,6 +42,38 @@ class ShareDatasController < ApplicationController
       render json: parse_xml_morningstar
     end
   end
+
+# Get DataOutPut  ////////////////////////////////////////////////////////////////
+  def call_morningstar_xml_fund
+    # secid = params[:secid]
+    isin = params[:query]
+
+# http://edw.morningstar.com/DataOutput.aspx?Package=EDW&ClientId=EOS&Isin=F00000QOL4&IDTYpe=FundShareClassId&Content=16&Currencies=BAS
+
+    file = open("http://edw.morningstar.com/DataOutput.aspx?Package=EDW&ClientId=EOS&Isin=" +
+                isin +
+                "&IDTYpe=FundShareClassId&Content=16&Currencies=BAS")
+    @documentGetDataOutput = Nokogiri::XML(file)
+  end
+
+  def share_search
+    # URL Exemple : http://edw.morningstar.com/DataOutput.aspx?Package=EDW&ClientId=EOS&Id=F00000QOL4&IDTYpe=FundShareClassId&Content=16&Currencies=BAS
+    morningstar_data_point = params[:morningstar_data_point]
+
+# *******************************************************
+# Gérer les requetes vides
+# *******************************************************
+    if !morningstar_data_point.empty?
+      share_data = JSON.parse(parse_xml_morningstar)
+      render json: share_data[morningstar_data_point]
+    else
+      render json: parse_xml_morningstar
+    end
+  end
+
+
+
+# http://edw.morningstar.com/DataOutput.aspx?Package=EDW&ClientId=EOS&Id=F00000QOL4&IDTYpe=FundShareClassId&Content=16&Currencies=BAS
 
 private
 
