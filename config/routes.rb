@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   end
   namespace :share_datas do
     get "share_search"
+    get "call_fund_data_output"
   end
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
