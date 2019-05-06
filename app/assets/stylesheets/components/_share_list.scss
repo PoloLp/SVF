@@ -54,6 +54,11 @@
   font-size: 14px;
   font-weight: bold;
 }
+
+.edit-form {
+  margin: 10px;
+}
+
 .status.accepted {
   color: #04A366;
 }
@@ -74,4 +79,8 @@
   color: green;
   font-size: 14px;
   font-weight: bold;
+}
+
+.hidden {
+  display:none;
 }

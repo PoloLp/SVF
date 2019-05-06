@@ -1,26 +1,100 @@
 <div class="container">
     <%= render 'company_display'%>
   <div class="row">
-    <h2>Search by isin or name</h2>
+    <h2>Recherche de parts pour édition</h2>
     <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
-      <div class="row">
+      <div id="search-form-db" class="row">
         <%= form_tag shares_path, method: :get, class:"form-group form-inline" do %>
             <%= text_field_tag :query,
               params[:query],
               class: "form-control",
-              placeholder: "Find a fund by isin or name" %>
+              id: "placeholder-search-db",
+              placeholder: "isin ou nom de part" %>
             <%= select_tag :currency_query, options_for_select([["Euro", "EUR"],
                                                                 ["US Dollar", "USD"],
                                                                 ["GBP", "GBP"]]),
                                             include_blank: true,
                                             class:"form-control" %>
             <%= submit_tag "Search", class: "btn btn-primary" %>
+        <div id="OpenLookInMs"class="btn btn-danger">
+            Morningstar Search
+        </div>
         <% end %>
       </div>
       <div id="Sharelist1">
-        <%= render 'empty_result' unless !@shares.empty? %>
-        <%= render 'list_shares' %>
+        <%= render 'empty_result' unless !@shares.empty? || params[:query].nil? %>
       </div>
     </div>
   </div>
+
+  <div id="search-form-ms" class="row hidden">
+    <div class="col-xs-12">
+      <%= render 'data_provider_form' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <%= render 'list_shares' %>
+    </div>
+  </div>
+
 </div>
+
+<script>
+
+// LU0912262358
+
+  const form_Search_Db = document.querySelector('#search-form-db');
+  const placeholder_search_db = document.querySelector('#placeholder-search-db');
+  const form_Search_Ms = document.querySelector('#search-form-ms');
+  const placeholder_search_ms = document.querySelector('#placeholder-search-ms');
+  const button_Look_In_Ms = document.querySelector('#LookInMs');
+  const button_open_Look_InMs = document.querySelector('#OpenLookInMs');
+  const button_Cancel_Look_InMs = document.querySelector('#CancelLookInMs');
+  const url = 'http://localhost:3000//share_datas/share_search?morningstar_data_point=&query='
+
+  button_Look_In_Ms.addEventListener('click', (event) => {
+    if (placeholder_search_ms.value !== '') {
+      fetchDataProvider(placeholder_search_ms.value, event.currentTarget, );
+    }
+  });
+
+// Attention les toggles déconnent ////////////////////////////////////
+
+  button_open_Look_InMs.addEventListener('click', (event) => {
+    form_Search_Ms.classList.toggle("hidden");
+  })
+
+  button_Cancel_Look_InMs.addEventListener('click', (event) => {
+    form_Search_Db.classList.toggle("hidden");
+    form_Search_Ms.classList.toggle("hidden");
+  });
+
+  // Attention les toggles déconnent ////////////////////////////////////
+
+  function fetchDataProvider(search_value, target) {
+
+    console.log('fetching datas --> ' + search_value);
+    target.innerText = 'Recherche en cours...';
+    target.setAttribute("disabled", "");
+
+    fetch(url + search_value)
+      .then(response => response.json())
+      .then((data) => {
+        console.log(data.numbers_result);
+        data.result.forEach((result) => {
+          const share = `<li>
+                            <p>${result.id}</p>
+                            <p>${result.isin}</p>
+                            <p>${result.name}</p>
+                          </li>`;
+          results.insertAdjacentHTML("beforeend", share);
+          results.insertAdjacentHTML("beforeend", data);
+        });
+        target.innerText = 'Recherche terminée!';
+      });
+    form_Search_Db.classList.toggle("hidden");
+  }
+
+</script>
