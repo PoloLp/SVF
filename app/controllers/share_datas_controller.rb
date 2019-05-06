@@ -1,6 +1,8 @@
 require 'pry-byebug'
 class ShareDatasController < ApplicationController
   before_action :call_morningstar_xml_fund, only: [:share_search]
+
+# Get Universe ////////////////////////////////////////////////////////////////
   def call_morningstar_xml_fund
     # secid = params[:secid]
     query = params[:query]
@@ -63,6 +65,7 @@ class ShareDatasController < ApplicationController
   def call_fund_data_output_performance_id
 
   end
+>>>>>>> f22cd6841cb0357655e5ade79063edc45a4e59d5
 
 private
 
