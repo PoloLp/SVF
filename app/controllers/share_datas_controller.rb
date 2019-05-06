@@ -65,7 +65,6 @@ class ShareDatasController < ApplicationController
   def call_fund_data_output_performance_id
 
   end
->>>>>>> f22cd6841cb0357655e5ade79063edc45a4e59d5
 
 private
 
@@ -79,9 +78,9 @@ private
     array_results = []
     @document.xpath("/FundShareClassList").children.each do |share_class|
       hash_results = { id: share_class.xpath("Id").text,
-                               isin: share_class.xpath("ISIN").text,
-                               name: share_class.xpath("Name").text,
-                               ms_category_id: share_class.xpath("MSCategoryId").text }
+                       isin: share_class.xpath("ISIN").text,
+                       name: share_class.xpath("Name").text,
+                       ms_category_id: share_class.xpath("MSCategoryId").text }
       array_results << hash_results
     end
     return array_results

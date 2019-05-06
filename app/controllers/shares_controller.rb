@@ -27,12 +27,12 @@ class SharesController < ApplicationController
   def create
 
 # call le xml pour les isin et results
+byebug.pry
 
     @share = Share.new(share_params)
     @share.performanceid = "0P0000ZWX7"
 
 
-byebug.pry
 
     respond_to do |format|
       if @share.save
