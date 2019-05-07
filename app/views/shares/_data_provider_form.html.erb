@@ -6,11 +6,9 @@
   <div><input id="CancelLookInMs" type="submit" class="btn-create normal-font-button" value="Fermer"></div>
 </div>
 
-<%= simple_form_for(Share.new) do |form| %>
-  <%= form.hidden_field :isin, as: :text, :value => "FR123514511" %>
-  <%= form.hidden_field :performanceid, as: :text, :value => "FOopjdazjd" %>
-  <%= form.button :submit, "Ajouter les parts en base de données", class: "btn btn-primary" %>
-<% end %>
-
 <ul id="results">
 </ul>
+
+<div id="form-create-shares">
+
+</div>
