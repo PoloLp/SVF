@@ -25,14 +25,10 @@ class SharesController < ApplicationController
   end
 
   def create
-
-# call le xml pour les isin et results
-byebug.pry
+binding.pry
 
     @share = Share.new(share_params)
-    @share.performanceid = "0P0000ZWX7"
-
-
+    # @share.performanceid = "0P0000ZWX7"
 
     respond_to do |format|
       if @share.save
@@ -46,9 +42,7 @@ byebug.pry
     end
   end
 
-# methode pour appeler le xml results et checker les différents id
-
-private
+  private
 
   def share_params
     params.require(:share).permit(:performanceid, :isin)
