@@ -1,0 +1,14 @@
+// function refreshForm(innerHTML) {
+//   const newShareForm = document.getElementById('new_share');
+//   newShareForm.innerHTML = innerHTML;
+// }
+
+function addShare(shareHTML) {
+  const shares = document.getElementById('results');
+  shares.insertAdjacentHTML('beforeend', shareHTML);
+}
+
+<% if @share.errors.any? %>
+<% else %>
+  addShare('<%= j render "create", share: @share %>');
+<% end %>

@@ -140,8 +140,9 @@
 
     // Faire passer le Json dans le partial pour que ça génère autant de share qu'il y
     // a de results
-    formCreateShares.innerHTML = "<%= j render 'create_share_form' %>";
-    console.log("<%= j render 'create_share_form' %>");
+    const nbShareResults = 2
+    formCreateShares.innerHTML = "<%= j render 'create_share_form' , nb_share_results: 2 %>";
+    console.log("<%= j render 'create_share_form' , nb_parts: 2 %>");
   }
 
 </script>

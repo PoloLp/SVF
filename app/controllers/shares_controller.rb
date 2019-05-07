@@ -25,19 +25,22 @@ class SharesController < ApplicationController
   end
 
   def create
-binding.pry
 
     @share = Share.new(share_params)
     # @share.performanceid = "0P0000ZWX7"
+binding.pry
 
-    respond_to do |format|
-      if @share.save
-        format.html { redirect_to @shares.post, notice: 'share was successfully created.' }
-        format.js   { }
-        format.json { render :show, status: :created, location: @share }
-      else
-        format.html { render :new }
-        format.json { render json: @share.errors, status: :unprocessable_entity }
+# Iterer sur les @shares du json si il y en a plusieurs
+
+    if @share.save
+      respond_to do |format|
+        format.html { render 'shares/create', share: @share }
+        format.js  # <-- will render `app/views/shares/create.js.erb`
+      end
+    else
+      respond_to do |format|
+        format.html { render 'shares/show' }
+        format.js  # <-- idem
       end
     end
   end
