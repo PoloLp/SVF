@@ -47,8 +47,10 @@
 <script>
 
 // LU0912262358
-  const url = 'http://localhost:3000//share_datas/share_search?morningstar_data_point=&query='
 
+  const url = 'http://localhost:3000//share_datas/share_search?morningstar_data_point=&query='
+  //////////////////////////////////////
+  // Dynamics menu
   const form_Search_Db = document.querySelector('#search-form-db');
   const placeholder_search_db = document.querySelector('#placeholder-search-db');
   const form_Search_Ms = document.querySelector('#search-form-ms');
@@ -57,7 +59,9 @@
   const button_open_Look_InMs = document.querySelector('#OpenLookInMs');
   const button_Cancel_Look_InMs = document.querySelector('#CancelLookInMs');
   const button_New_Look_InMs = document.querySelector('#NewLookInMs');
-
+  //////////////////////////////////////
+  // Create shares
+  const formCreateShares = document.querySelector('#form-create-shares')
   //////////////////////////////////////
 
   button_Look_In_Ms.addEventListener('click', (event) => {
@@ -102,10 +106,7 @@
 
         data.result.forEach((result) => {
           console.log(result.isin);
-          // <#%= @isin  %> = result.isin;
-          // <#%= new_share = Share.new(isin: @isin) %>
 
-          <%= x=1 %>
           const share = `<li>
                             <p>${result.id}</p>
                             <p>${result.isin}</p>
@@ -114,6 +115,7 @@
           results.insertAdjacentHTML("beforeend", share);
         });
         target.value = 'Recherche terminée !';
+        createFormNewShares()
       });
     button_New_Look_InMs.classList.toggle("hidden");
   };
@@ -127,4 +129,20 @@
       };
     };
   };
+
+  function setHiddenValueCreateShare(idSelector, hiddenFieldValue) {
+    // Set the hidden tag's value to the select tag value
+    document.querySelector(`#${idSelector}`).value = hiddenFieldValue ;
+  }
+
+  function createFormNewShares() {
+    // Set the hidden tag's value to the select tag value
+
+    // Faire passer le Json dans le partial pour que ça génère autant de share qu'il y
+    // a de results
+    const nbShareResults = 2
+    formCreateShares.innerHTML = "<%= j render 'create_share_form' , nb_share_results: 2 %>";
+    console.log("<%= j render 'create_share_form' , nb_parts: 2 %>");
+  }
+
 </script>

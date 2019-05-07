@@ -6,12 +6,9 @@
   <div><input id="CancelLookInMs" type="submit" class="btn-create normal-font-button" value="Fermer"></div>
 </div>
 
-  <%= simple_form_for Share.new, :remote => true do |f| %>
-    <%= f.input :isin %>
-    <%= f.submit "ajouter le fonds en db", class: "btn btn-primary" %>
-  <% end %>
+<ul id="results">
+</ul>
 
+<div id="form-create-shares">
 
-  <ul id="results">
-  </ul>
-
+</div>

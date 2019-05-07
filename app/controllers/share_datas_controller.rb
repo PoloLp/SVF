@@ -33,9 +33,9 @@ class ShareDatasController < ApplicationController
     # URL Exemple : http://localhost:3000//share_datas/share_search?morningstar_data_point=&query=helium%20performance
     morningstar_data_point = params[:morningstar_data_point]
 
-# *******************************************************
-# Gérer les requetes vides
-# *******************************************************
+    # *******************************************************
+    # Gérer les requetes vides
+    # *******************************************************
     if !morningstar_data_point.empty?
       share_data = JSON.parse(parse_xml_morningstar)
       render json: share_data[morningstar_data_point]
@@ -60,10 +60,6 @@ class ShareDatasController < ApplicationController
                 "&IDTYpe=FundShareClassId&Content=1471&Currencies=BAS&Remove=Strategy,DataStatus,DataGroupList,Operation,TradingInformation,ShareClassAttributes,InternationalFeature,ShareClassNarratives,SP_CodeAndValue,MultilingualVariation,HistoricalOperation,ClassPerformance")
     @document_get_data_output = Nokogiri::XML(file)
     render json: JSON.parse(JSON.generate(parse_data_output_results))
-  end
-
-  def call_fund_data_output_performance_id
-
   end
 
 private
@@ -100,7 +96,8 @@ private
                        isin: share_class.xpath("PerformanceBasics/ISIN").text,
                        is_base_currency: share_class.xpath("IsBaseCurrency").text,
                        performance_id: share_class.xpath("PerformanceId").text,
-                       fund_id: @document_get_data_output.xpath("FundShareClass/@_FundId").text }
+                       fund_id: @document_get_data_output.xpath("FundShareClass/@_FundId").text,
+                       sec_id: @document_get_data_output.xpath("FundShareClass/@_Id").text }
       array_results << hash_results
     end
     share = { numbers_result: xpath_performanceid.children.count,
