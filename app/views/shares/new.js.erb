@@ -1,1 +1,38 @@
-document.querySelector('#new_share_link').insertAdjacentHTML("beforeend",'<%= j render("new_share_form") %>');
+
+
+//////////////////////////////////////
+
+// function fetchDataProvider(searchValue, target) {
+
+//   console.log('fetching datas --> ' + searchValue);
+//   target.value = 'Recherche en cours...';
+//   target.setAttribute("disabled", '');
+//   fetch(url + searchValue)
+//     .then(response => response.json())
+//     .then((data) => {
+
+//       const nb_results = `<p id="nb_results">Nombre de fonds trouvés : ${data.numbers_result}</p>`;
+//       results.insertAdjacentHTML("beforebegin", nb_results);
+
+//       data.result.forEach((result) => {
+//         console.log(result.isin);
+
+//         const share = `<li>
+//                           <p>${result.id}</p>
+//                           <p>${result.isin}</p>
+//                           <p>${result.name}</p>
+//                         </li>`;
+//         results.insertAdjacentHTML("beforeend", share);
+//       });
+//     });
+// };
+
+document.querySelector('#share_list_form').insertAdjacentHTML("beforeend", '<%= j render partial: "new_share_form", locals: {share: @share} %>');
+
+let isinPlaceholder = document.querySelector('#isin_placeholder');
+
+isinPlaceholder.value = placeholderSearchMs.value;
+
+document.querySelector('#submit_share_list').click(
+  console.log('coucou'));
+

@@ -41,6 +41,18 @@
       <%= render 'list_shares' %>
     </div>
   </div>
+  <div class="row">
+    <div class="col-xs-12">
+<!--       <#%= form_for (@share), remote: true do |form| %>
+        <#%= form.text_field :isin , value: "cop"%>
+        <#%= form.button :submit %>
+      <#% end %> -->
+      <div id="share_list"></div>
+      <div id="share_list_form"></div>
+    </div>
+  </div>
+
+
 
 </div>
 
@@ -48,13 +60,13 @@
 
 // LU0912262358
 
-  const url = 'http://localhost:3000//share_datas/share_search?morningstar_data_point=&query='
+  const url = 'http://localhost:3000//share_datas/share_search?morningstar_data_point=&query=';
   //////////////////////////////////////
   // Dynamics menu
   const form_Search_Db = document.querySelector('#search-form-db');
   const placeholder_search_db = document.querySelector('#placeholder-search-db');
   const form_Search_Ms = document.querySelector('#search-form-ms');
-  const placeholder_search_ms = document.querySelector('#placeholder-search-ms');
+  const placeholderSearchMs = document.querySelector('#placeholder-search-ms');
   const button_Look_In_Ms = document.querySelector('#LookInMs');
   const button_open_Look_InMs = document.querySelector('#OpenLookInMs');
   const button_Cancel_Look_InMs = document.querySelector('#CancelLookInMs');
@@ -66,11 +78,11 @@
 
   button_Look_In_Ms.addEventListener('click', (event) => {
     // Modifier avec .addEventListener("submit", (event) =>)
-    if (placeholder_search_ms.value !== '') {
+    if (placeholderSearchMs.value !== '') {
       if (document.querySelector('#nb_results')) {
         DeleteResult();
       };
-      fetchDataProvider(placeholder_search_ms.value, event.currentTarget, );
+      fetchDataProvider(placeholderSearchMs.value, event.currentTarget, );
     }
   });
 
@@ -116,7 +128,7 @@
           results.insertAdjacentHTML("beforeend", share);
         });
         target.value = 'Recherche terminée !';
-        createFormNewShares()
+        // createFormNewShares()
       });
     button_New_Look_InMs.classList.toggle("hidden");
   };
@@ -136,14 +148,5 @@
     document.querySelector(`#${idSelector}`).value = hiddenFieldValue ;
   }
 
-  function createFormNewShares() {
-    // Faire passer le Json dans le partial pour que ça génère autant de share qu'il y
-    // a de results
-    const nbShareResults = 2;
-
-    formCreateShares.innerHTML = "<%= j render partial:'create_share_form' , locals: { nbShareResults: 2 } %>";
-    console.log("<%= j render partial:'create_share_form' , locals: { nbShareResults: 2 } %>");
-    console.log(`${nbShareResults}`)
-  }
 
 </script>
