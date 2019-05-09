@@ -3,6 +3,12 @@ require 'nokogiri'
 require 'byebug'
 
 class SharesController < ApplicationController
+  def new
+    @NewShare = Share.new
+
+binding.pry
+  end
+
   def index
     if params[:query].present?
       sql_query = "(isin ILIKE :query OR currencyspecificisin ILIKE :query OR fundname ILIKE :query)"
@@ -25,12 +31,12 @@ class SharesController < ApplicationController
   end
 
   def create
-
-    @share = Share.new(share_params)
+    # @share =
+    # @share = Share.new(share_params)
     # @share.performanceid = "0P0000ZWX7"
-binding.pry
+    binding.pry
 
-# Iterer sur les @shares du json si il y en a plusieurs
+    # Iterer sur les @shares du json si il y en a plusieurs
 
     if @share.save
       respond_to do |format|

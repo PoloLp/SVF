@@ -65,6 +65,7 @@
   //////////////////////////////////////
 
   button_Look_In_Ms.addEventListener('click', (event) => {
+    // Modifier avec .addEventListener("submit", (event) =>)
     if (placeholder_search_ms.value !== '') {
       if (document.querySelector('#nb_results')) {
         DeleteResult();
@@ -136,13 +137,13 @@
   }
 
   function createFormNewShares() {
-    // Set the hidden tag's value to the select tag value
-
     // Faire passer le Json dans le partial pour que ça génère autant de share qu'il y
     // a de results
-    const nbShareResults = 2
-    formCreateShares.innerHTML = "<%= j render 'create_share_form' , nb_share_results: 2 %>";
-    console.log("<%= j render 'create_share_form' , nb_parts: 2 %>");
+    const nbShareResults = 2;
+
+    formCreateShares.innerHTML = "<%= j render partial:'create_share_form' , locals: { nbShareResults: 2 } %>";
+    console.log("<%= j render partial:'create_share_form' , locals: { nbShareResults: 2 } %>");
+    console.log(`${nbShareResults}`)
   }
 
 </script>
