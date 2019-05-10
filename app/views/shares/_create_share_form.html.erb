@@ -1,7 +1,0 @@
-<!-- Ajouter les champs qui sont retrounés par le Json -->
-
-<%= simple_form_for(Share.new, remote: true) do |form| %>
-  <%= form.input :isin, as: :text, :value => "FR123514511" %>
-  <%= form.hidden_field :performanceid, as: :text, :value => "FOopjdazjd" %>
-  <%= form.button :submit, "Ajouter les parts en base de données", class: "btn btn-primary" %>
-<% end %>

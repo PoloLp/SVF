@@ -6,9 +6,11 @@
   <div><input id="CancelLookInMs" type="submit" class="btn-create normal-font-button" value="Fermer"></div>
 </div>
 
-<ul id="results">
+<ul id="results" class="list-inline">
 </ul>
 
 <div id="form-create-shares">
 
 </div>
+
+<%= link_to "New Share", new_share_path, id: "new_share_link", remote: true %>

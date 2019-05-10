@@ -3,6 +3,7 @@ require 'nokogiri'
 require 'byebug'
 
 class SharesController < ApplicationController
+
   def index
     if params[:query].present?
       sql_query = "(isin ILIKE :query OR currencyspecificisin ILIKE :query OR fundname ILIKE :query)"
@@ -17,6 +18,8 @@ class SharesController < ApplicationController
     else
       @shares = []
     end
+
+    @share = Share.new()
   end
 
   def show
@@ -24,13 +27,17 @@ class SharesController < ApplicationController
     @category = Category.where(typecode: @share.morningstarcategoryid).first
   end
 
+  def new
+    @share = Share.new(isin: "#{helpers.test_helper}")
+  end
+
   def create
-
     @share = Share.new(share_params)
-    # @share.performanceid = "0P0000ZWX7"
-binding.pry
 
-# Iterer sur les @shares du json si il y en a plusieurs
+    @share = fetch_data_output(share_params[:isin])
+    binding.pry
+
+    # Iterer sur les @shares du json si il y en a plusieurs
 
     if @share.save
       respond_to do |format|
@@ -49,5 +56,17 @@ binding.pry
 
   def share_params
     params.require(:share).permit(:performanceid, :isin)
+  end
+
+  def fetch_data_output(isin)
+
+# ça déconne ici : il ne trouve rien à ouvrir en suivant le lien :
+# Errno::ENOENT (No such file or directory @ rb_sysopen - http://localhost:3000//share_datas/call_fund_data_output?morningstar_data_point=&query=LU0090841262):
+
+
+    filepath = "http://localhost:3000//share_datas/call_fund_data_output?morningstar_data_point=&query=LU0090841262"
+    serialized_shares = File.read(filepath)
+    shares = JSON.parse(serialized_shares)
+    return shares
   end
 end
